@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */; };
+		BFAF7FF01AE8318C007A3468 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF7FEF1AE8318C007A3468 /* ViewController.swift */; };
+		BFAF7FF31AE8318C007A3468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF11AE8318C007A3468 /* Main.storyboard */; };
+		BFAF7FF51AE8318C007A3468 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF41AE8318C007A3468 /* Images.xcassets */; };
+		BFAF7FF81AE8318C007A3468 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF61AE8318C007A3468 /* LaunchScreen.xib */; };
+		BFAF80041AE8318C007A3468 /* PoopCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF80031AE8318C007A3468 /* PoopCheckTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFAF7FFE1AE8318C007A3468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFAF7FE01AE8318C007A3468 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFAF7FE71AE8318C007A3468;
+			remoteInfo = PoopCheck;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BFAF7FE81AE8318C007A3468 /* PoopCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoopCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAF7FEC1AE8318C007A3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFAF7FEF1AE8318C007A3468 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFAF7FF21AE8318C007A3468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFAF7FF41AE8318C007A3468 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BFAF7FF71AE8318C007A3468 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BFAF7FFD1AE8318C007A3468 /* PoopCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PoopCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAF80021AE8318C007A3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAF80031AE8318C007A3468 /* PoopCheckTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoopCheckTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFAF7FE51AE8318C007A3468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAF7FFA1AE8318C007A3468 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BFAF7FDF1AE8318C007A3468 = {
+			isa = PBXGroup;
+			children = (
+				BFAF7FEA1AE8318C007A3468 /* PoopCheck */,
+				BFAF80001AE8318C007A3468 /* PoopCheckTests */,
+				BFAF7FE91AE8318C007A3468 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BFAF7FE91AE8318C007A3468 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF7FE81AE8318C007A3468 /* PoopCheck.app */,
+				BFAF7FFD1AE8318C007A3468 /* PoopCheckTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFAF7FEA1AE8318C007A3468 /* PoopCheck */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */,
+				BFAF7FEF1AE8318C007A3468 /* ViewController.swift */,
+				BFAF7FF11AE8318C007A3468 /* Main.storyboard */,
+				BFAF7FF41AE8318C007A3468 /* Images.xcassets */,
+				BFAF7FF61AE8318C007A3468 /* LaunchScreen.xib */,
+				BFAF7FEB1AE8318C007A3468 /* Supporting Files */,
+			);
+			path = PoopCheck;
+			sourceTree = "<group>";
+		};
+		BFAF7FEB1AE8318C007A3468 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF7FEC1AE8318C007A3468 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BFAF80001AE8318C007A3468 /* PoopCheckTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF80031AE8318C007A3468 /* PoopCheckTests.swift */,
+				BFAF80011AE8318C007A3468 /* Supporting Files */,
+			);
+			path = PoopCheckTests;
+			sourceTree = "<group>";
+		};
+		BFAF80011AE8318C007A3468 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFAF80021AE8318C007A3468 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFAF7FE71AE8318C007A3468 /* PoopCheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAF80071AE8318C007A3468 /* Build configuration list for PBXNativeTarget "PoopCheck" */;
+			buildPhases = (
+				BFAF7FE41AE8318C007A3468 /* Sources */,
+				BFAF7FE51AE8318C007A3468 /* Frameworks */,
+				BFAF7FE61AE8318C007A3468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PoopCheck;
+			productName = PoopCheck;
+			productReference = BFAF7FE81AE8318C007A3468 /* PoopCheck.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFAF7FFC1AE8318C007A3468 /* PoopCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAF800A1AE8318C007A3468 /* Build configuration list for PBXNativeTarget "PoopCheckTests" */;
+			buildPhases = (
+				BFAF7FF91AE8318C007A3468 /* Sources */,
+				BFAF7FFA1AE8318C007A3468 /* Frameworks */,
+				BFAF7FFB1AE8318C007A3468 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFAF7FFF1AE8318C007A3468 /* PBXTargetDependency */,
+			);
+			name = PoopCheckTests;
+			productName = PoopCheckTests;
+			productReference = BFAF7FFD1AE8318C007A3468 /* PoopCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFAF7FE01AE8318C007A3468 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = BEPiD;
+				TargetAttributes = {
+					BFAF7FE71AE8318C007A3468 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					BFAF7FFC1AE8318C007A3468 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = BFAF7FE71AE8318C007A3468;
+					};
+				};
+			};
+			buildConfigurationList = BFAF7FE31AE8318C007A3468 /* Build configuration list for PBXProject "PoopCheck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFAF7FDF1AE8318C007A3468;
+			productRefGroup = BFAF7FE91AE8318C007A3468 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFAF7FE71AE8318C007A3468 /* PoopCheck */,
+				BFAF7FFC1AE8318C007A3468 /* PoopCheckTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFAF7FE61AE8318C007A3468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAF7FF31AE8318C007A3468 /* Main.storyboard in Resources */,
+				BFAF7FF81AE8318C007A3468 /* LaunchScreen.xib in Resources */,
+				BFAF7FF51AE8318C007A3468 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAF7FFB1AE8318C007A3468 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFAF7FE41AE8318C007A3468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAF7FF01AE8318C007A3468 /* ViewController.swift in Sources */,
+				BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAF7FF91AE8318C007A3468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAF80041AE8318C007A3468 /* PoopCheckTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFAF7FFF1AE8318C007A3468 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFAF7FE71AE8318C007A3468 /* PoopCheck */;
+			targetProxy = BFAF7FFE1AE8318C007A3468 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFAF7FF11AE8318C007A3468 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAF7FF21AE8318C007A3468 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFAF7FF61AE8318C007A3468 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAF7FF71AE8318C007A3468 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFAF80051AE8318C007A3468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFAF80061AE8318C007A3468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFAF80081AE8318C007A3468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoopCheck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFAF80091AE8318C007A3468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PoopCheck/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFAF800B1AE8318C007A3468 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PoopCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoopCheck.app/PoopCheck";
+			};
+			name = Debug;
+		};
+		BFAF800C1AE8318C007A3468 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = PoopCheckTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PoopCheck.app/PoopCheck";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFAF7FE31AE8318C007A3468 /* Build configuration list for PBXProject "PoopCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAF80051AE8318C007A3468 /* Debug */,
+				BFAF80061AE8318C007A3468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFAF80071AE8318C007A3468 /* Build configuration list for PBXNativeTarget "PoopCheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAF80081AE8318C007A3468 /* Debug */,
+				BFAF80091AE8318C007A3468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BFAF800A1AE8318C007A3468 /* Build configuration list for PBXNativeTarget "PoopCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAF800B1AE8318C007A3468 /* Debug */,
+				BFAF800C1AE8318C007A3468 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFAF7FE01AE8318C007A3468 /* Project object */;
+}
