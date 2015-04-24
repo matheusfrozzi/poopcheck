@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("2AUvDjhYywJ3gdwpxUn1F1G9JLJsJcEd73GaXeh1",
             clientKey: "vLg9CIGiCIwXjXkEX9MppE7FDKTD6NBXduXNrwXh")
         
+//        PFFacebookUtils.initializeFacebookWithLaunchOptions(launchOptions)
+
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 

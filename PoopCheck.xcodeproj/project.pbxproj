@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */; };
 		BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */; };
+		BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252941AEAB033001B8F57 /* LoginViewController.swift */; };
 		BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */; };
 		BFAF7FF31AE8318C007A3468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF11AE8318C007A3468 /* Main.storyboard */; };
 		BFAF7FF51AE8318C007A3468 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF41AE8318C007A3468 /* Images.xcassets */; };
@@ -34,6 +35,9 @@
 		BFAF80361AE86562007A3468 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF80351AE86562007A3468 /* UserManager.swift */; };
 		BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF80371AE86573007A3468 /* PoopManager.swift */; };
 		BFAF803C1AE87722007A3468 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF803B1AE87722007A3468 /* CheckInViewController.swift */; };
+		BFB12C1A1AEACAE900B8A09F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */; };
+		BFB12C1B1AEACAE900B8A09F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */; };
+		BFB12C1C1AEACAE900B8A09F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 /* Begin PBXFileReference section */
 		BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopsViewController.swift; sourceTree = "<group>"; };
 		BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopTableViewCell.swift; sourceTree = "<group>"; };
+		BF3252941AEAB033001B8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BFAF7FE81AE8318C007A3468 /* PoopCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoopCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAF7FEC1AE8318C007A3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +83,10 @@
 		BFAF80351AE86562007A3468 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		BFAF80371AE86573007A3468 /* PoopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopManager.swift; sourceTree = "<group>"; };
 		BFAF803B1AE87722007A3468 /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckInViewController.swift; sourceTree = "<group>"; };
+		BFB12C061AEAC4D800B8A09F /* header-bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "header-bridge.h"; sourceTree = "<group>"; };
+		BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +101,14 @@
 				BFAF802B1AE83544007A3468 /* libsqlite3.dylib in Frameworks */,
 				BFAF802C1AE83544007A3468 /* libz.dylib in Frameworks */,
 				BFAF802D1AE83544007A3468 /* MobileCoreServices.framework in Frameworks */,
+				BFB12C1A1AEACAE900B8A09F /* FBSDKCoreKit.framework in Frameworks */,
 				BFAF802E1AE83544007A3468 /* QuartzCore.framework in Frameworks */,
 				BFAF802F1AE83544007A3468 /* Security.framework in Frameworks */,
 				BFAF80301AE83544007A3468 /* StoreKit.framework in Frameworks */,
 				BFAF80311AE83544007A3468 /* SystemConfiguration.framework in Frameworks */,
+				BFB12C1C1AEACAE900B8A09F /* FBSDKShareKit.framework in Frameworks */,
 				BFAF80181AE8347F007A3468 /* ParseUI.framework in Frameworks */,
+				BFB12C1B1AEACAE900B8A09F /* FBSDKLoginKit.framework in Frameworks */,
 				BFAF80161AE8347F007A3468 /* Bolts.framework in Frameworks */,
 				BFAF80191AE8347F007A3468 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				BFAF801A1AE8347F007A3468 /* ParseFacebookUtils.framework in Frameworks */,
@@ -139,6 +151,7 @@
 			children = (
 				BFAF7FF41AE8318C007A3468 /* Images.xcassets */,
 				BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */,
+				BFB12C061AEAC4D800B8A09F /* header-bridge.h */,
 				BFAF80341AE86502007A3468 /* Model */,
 				BFAF80331AE864FD007A3468 /* View */,
 				BFAF80321AE864F4007A3468 /* Controller */,
@@ -175,6 +188,9 @@
 		BFAF800F1AE8344F007A3468 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */,
+				BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */,
+				BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */,
 				BFAF801C1AE83544007A3468 /* AudioToolbox.framework */,
 				BFAF801D1AE83544007A3468 /* CFNetwork.framework */,
 				BFAF801E1AE83544007A3468 /* CoreGraphics.framework */,
@@ -202,6 +218,7 @@
 				BFAF803B1AE87722007A3468 /* CheckInViewController.swift */,
 				BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */,
 				BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */,
+				BF3252941AEAB033001B8F57 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -324,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */,
 				BFAF80361AE86562007A3468 /* UserManager.swift in Sources */,
 				BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */,
 				BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */,
@@ -461,10 +479,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/matheusfrozzi/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PoopCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./PoopCheck/header-bridge.h";
 			};
 			name = Debug;
 		};
@@ -475,10 +495,12 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/matheusfrozzi/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PoopCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "./PoopCheck/header-bridge.h";
 			};
 			name = Release;
 		};

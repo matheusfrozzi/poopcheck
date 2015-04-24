@@ -7,7 +7,42 @@
 //
 
 import UIKit
+import Parse
+
+var objectId: String!
+var username: String!
+var password: String!
+var createdAt: NSDate!
 
 class UserManager: NSObject {
-   
+    func register() {
+        var user = PFUser()
+        user.username = "myUsername"
+        user.password = "myPassword"
+        user.email = "email@example.com"
+        // other fields can be set just like with PFObject
+
+        user.signUpInBackgroundWithBlock { (succeded, error) -> Void in
+            if error == nil {
+                // Hooray! Let them use the app now.
+            } else {
+                println("errooooo")
+                // Show the errorString somewhere and let the user try again.
+            }
+        }
+        
+ 
+    }
+    
+    func login(username: String, password: String) {
+        PFUser.logInWithUsernameInBackground(username, password: password) {
+            (user, error) -> Void in
+            if user != nil {
+                println(user?.username)
+            } else {
+                // The login failed. Check error to see why.
+            }
+
+        }
+    }
 }

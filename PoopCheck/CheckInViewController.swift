@@ -39,12 +39,19 @@ class CheckInViewController: UIViewController {
             }
         }
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        var currentUser = PFUser.currentUser()
+        
+        if currentUser == nil {
+//            self.performSegueWithIdentifier("loginModal", sender: self)
+        }
+    }
 
     func mapView(mapView: MKMapView!,
         viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
             
             if annotation is MKUserLocation {
-                //return nil so map view draws "blue dot" for standard user location
                 return nil
             }
             
@@ -53,9 +60,7 @@ class CheckInViewController: UIViewController {
             var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
             if pinView == nil {
                 pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-//                pinView!.canShowCallout = true
-//                pinView!.animatesDrop = true
-//                pinView!.pinColor = .Purple
+
                 var image = UIImage(named:"toilet-icon")
                 pinView!.image = image
             }
@@ -68,7 +73,6 @@ class CheckInViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func centerMapOnLocation(location: CLLocation) {
