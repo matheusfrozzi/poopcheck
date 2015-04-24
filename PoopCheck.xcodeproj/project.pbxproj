@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */; };
+		BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */; };
 		BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */; };
 		BFAF7FF31AE8318C007A3468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF11AE8318C007A3468 /* Main.storyboard */; };
 		BFAF7FF51AE8318C007A3468 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF41AE8318C007A3468 /* Images.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopsViewController.swift; sourceTree = "<group>"; };
+		BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopTableViewCell.swift; sourceTree = "<group>"; };
 		BFAF7FE81AE8318C007A3468 /* PoopCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoopCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAF7FEC1AE8318C007A3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -196,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				BFAF803B1AE87722007A3468 /* CheckInViewController.swift */,
+				BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */,
+				BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -319,9 +325,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAF80361AE86562007A3468 /* UserManager.swift in Sources */,
+				BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */,
 				BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */,
 				BFAF803C1AE87722007A3468 /* CheckInViewController.swift in Sources */,
 				BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */,
+				BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -527,6 +535,7 @@
 				BFAF80091AE8318C007A3468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFAF800A1AE8318C007A3468 /* Build configuration list for PBXNativeTarget "PoopCheckTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +544,7 @@
 				BFAF800C1AE8318C007A3468 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

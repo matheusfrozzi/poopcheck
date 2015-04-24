@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oBd-AL-TDj">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Check In-->
@@ -23,21 +24,36 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvF-67-Qph">
-                                <rect key="frame" x="270" y="501" width="61" height="30"/>
-                                <state key="normal" title="Check In">
+                                <rect key="frame" x="48" y="491" width="504" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="g3C-4c-dSn"/>
+                                </constraints>
+                                <state key="normal" title="Poooooop!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="savePoop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTW-Ih-wq7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="e26-Nn-sKS" secondAttribute="trailing" id="HMU-ZP-T68"/>
                             <constraint firstItem="e26-Nn-sKS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KOO-Dd-y6a"/>
+                            <constraint firstItem="qvF-67-Qph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="TBG-xW-ZU5"/>
                             <constraint firstAttribute="bottom" secondItem="e26-Nn-sKS" secondAttribute="bottom" id="afg-px-f0q"/>
                             <constraint firstItem="e26-Nn-sKS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bGy-Wf-MwN"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qvF-67-Qph" secondAttribute="bottom" constant="16" id="hch-OX-L6J"/>
                             <constraint firstItem="qvF-67-Qph" firstAttribute="top" secondItem="e26-Nn-sKS" secondAttribute="bottom" constant="-99" id="pQA-OT-kWe"/>
                             <constraint firstAttribute="centerX" secondItem="qvF-67-Qph" secondAttribute="centerX" id="swH-is-OKR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qvF-67-Qph" secondAttribute="trailing" constant="32" id="two-wX-y4R"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="pQA-OT-kWe"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Check In" id="jKb-FN-Ojl"/>
                     <connections>
@@ -47,6 +63,83 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042" y="265"/>
+        </scene>
+        <!--MyPoops-->
+        <scene sceneID="klV-Dm-osM">
+            <objects>
+                <viewController id="aZW-z6-2UN" customClass="PoopsViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0ob-Ec-4ap"/>
+                        <viewControllerLayoutGuide type="bottom" id="tjr-Mo-HZk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zUQ-YZ-OOV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-rf-c6p">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Poops" rowHeight="65" id="wl9-IQ-9nH" customClass="PoopTableViewCell" customModule="PoopCheck" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wl9-IQ-9nH" id="9jr-Gt-ejz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30 p.m." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jp-mf-nT8">
+                                                    <rect key="frame" x="8" y="35" width="67" height="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday, 24/04/15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e2-i8-pjU">
+                                                    <rect key="frame" x="8" y="16" width="139" height="19"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8e2-i8-pjU" firstAttribute="leading" secondItem="9jr-Gt-ejz" secondAttribute="leadingMargin" id="0zM-2K-cjy"/>
+                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="bottom" secondItem="9jr-Gt-ejz" secondAttribute="bottomMargin" id="7ph-31-II8"/>
+                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="leading" secondItem="8e2-i8-pjU" secondAttribute="leading" id="KMw-8n-NsS"/>
+                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="top" secondItem="8e2-i8-pjU" secondAttribute="bottom" id="RdK-og-kyG"/>
+                                                <constraint firstItem="8e2-i8-pjU" firstAttribute="top" secondItem="9jr-Gt-ejz" secondAttribute="topMargin" constant="8" id="lJI-aE-ORe"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="7ph-31-II8"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="date" destination="8e2-i8-pjU" id="HMJ-ku-yi3"/>
+                                            <outlet property="hour" destination="8jp-mf-nT8" id="apD-K9-TJa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="aZW-z6-2UN" id="VOR-37-dsN"/>
+                                    <outlet property="delegate" destination="aZW-z6-2UN" id="lmF-Fr-Xkx"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="top" secondItem="zUQ-YZ-OOV" secondAttribute="top" id="7pa-mx-XG3"/>
+                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="leading" secondItem="zUQ-YZ-OOV" secondAttribute="leading" id="EBM-cL-A8q"/>
+                            <constraint firstAttribute="bottom" secondItem="Jxg-rf-c6p" secondAttribute="bottom" id="ZWm-BC-u6t"/>
+                            <constraint firstAttribute="trailing" secondItem="Jxg-rf-c6p" secondAttribute="trailing" id="ntd-WS-Pgx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MyPoops" id="2Ge-vm-dc3"/>
+                    <connections>
+                        <outlet property="tableView" destination="Jxg-rf-c6p" id="NCQ-uk-CCu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="exW-3V-V7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042" y="1010"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i65-b2-ehr">
@@ -60,6 +153,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="h2S-jx-RTX"/>
+                        <segue destination="aZW-z6-2UN" kind="relationship" relationship="viewControllers" id="5fa-eR-NwW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtN-N7-EMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
