@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LoginViewController: UIViewController {
 
@@ -18,6 +19,23 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func loginWIthFacebook(sender: AnyObject) {
+        let permissions = ["email", "public_profile", "user_friends"]
+
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions, block: { (user, error) -> Void in
+            if let user = user {
+                if user.isNew {
+                    println("User signed up and logged in through Facebook!")
+                    self.dismissViewControllerAnimated(true, completion: {});
+                } else {
+                    println("User logged in through Facebook!")
+                    self.dismissViewControllerAnimated(true, completion: {});
+                }
+            } else {
+                println("Uh oh. The user cancelled the Facebook login.")
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation

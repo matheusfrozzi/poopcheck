@@ -17,7 +17,11 @@ class PoopsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(false)
+        
         loadData()
     }
 
@@ -42,6 +46,8 @@ class PoopsViewController: UIViewController {
         var poopClass = PoopManager(dictionary: self.poops[indexPath.row] as! PFObject)
         cell.date.text = poopClass.date
         cell.hour.text = poopClass.hour
+        
+        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
 
         return cell
     }
@@ -51,9 +57,10 @@ class PoopsViewController: UIViewController {
     }
 
     func loadData() {
+        var currentUser = PFUser.currentUser()
         var poopClass = PoopManager()
 
-        poopClass.getPoops({ (myArray, error) -> () in
+        poopClass.getPoops(currentUser!.objectId!, callback: { (myArray, error) -> () in
             if(error == nil) {
                 self.poops = myArray!
                 self.updateTableView()

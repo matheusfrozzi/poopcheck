@@ -41,6 +41,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginWIthFacebook:" destination="D02-fo-8rY" eventType="touchUpInside" id="1hj-fK-JD2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pxe-0i-R2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="-473"/>
+            <point key="canvasLocation" x="1752" y="280"/>
         </scene>
         <!--Check In-->
         <scene sceneID="tne-QT-ifu">
@@ -117,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042" y="265"/>
+            <point key="canvasLocation" x="1043" y="280"/>
         </scene>
         <!--MyPoops-->
         <scene sceneID="klV-Dm-osM">
@@ -131,11 +134,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-rf-c6p">
-                                <rect key="frame" x="0.0" y="16" width="600" height="584"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-rf-c6p">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Poops" rowHeight="65" id="wl9-IQ-9nH" customClass="PoopTableViewCell" customModule="PoopCheck" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Poops" rowHeight="70" id="wl9-IQ-9nH" customClass="PoopTableViewCell" customModule="PoopCheck" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wl9-IQ-9nH" id="9jr-Gt-ejz">
@@ -181,7 +184,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="top" secondItem="zUQ-YZ-OOV" secondAttribute="top" constant="16" id="7pa-mx-XG3"/>
+                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="top" secondItem="zUQ-YZ-OOV" secondAttribute="top" id="7pa-mx-XG3"/>
                             <constraint firstItem="Jxg-rf-c6p" firstAttribute="leading" secondItem="zUQ-YZ-OOV" secondAttribute="leading" id="EBM-cL-A8q"/>
                             <constraint firstAttribute="bottom" secondItem="Jxg-rf-c6p" secondAttribute="bottom" id="ZWm-BC-u6t"/>
                             <constraint firstAttribute="trailing" secondItem="Jxg-rf-c6p" secondAttribute="trailing" id="ntd-WS-Pgx"/>
@@ -196,6 +199,42 @@
             </objects>
             <point key="canvasLocation" x="1042" y="1010"/>
         </scene>
+        <!--Poop Map-->
+        <scene sceneID="GVE-fY-F9k">
+            <objects>
+                <viewController id="mtD-vo-hLK" customClass="MapViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ubm-aY-hIY"/>
+                        <viewControllerLayoutGuide type="bottom" id="fyq-1z-QMn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVQ-G3-kEB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m2L-yn-ked">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mtD-vo-hLK" id="vMU-fK-C3v"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m2L-yn-ked" firstAttribute="top" secondItem="oVQ-G3-kEB" secondAttribute="top" id="Ewx-3J-6u1"/>
+                            <constraint firstAttribute="trailing" secondItem="m2L-yn-ked" secondAttribute="trailing" id="KEO-UM-Pae"/>
+                            <constraint firstAttribute="bottom" secondItem="m2L-yn-ked" secondAttribute="bottom" id="PHa-ev-nHg"/>
+                            <constraint firstItem="m2L-yn-ked" firstAttribute="leading" secondItem="oVQ-G3-kEB" secondAttribute="leading" id="oHx-Nk-LSn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Poop Map" id="PQS-iH-3Zx"/>
+                    <connections>
+                        <outlet property="mapView" destination="m2L-yn-ked" id="xmd-9L-CYn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efO-No-itV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1043" y="1755"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i65-b2-ehr">
             <objects>
@@ -209,11 +248,12 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="h2S-jx-RTX"/>
                         <segue destination="aZW-z6-2UN" kind="relationship" relationship="viewControllers" id="5fa-eR-NwW"/>
+                        <segue destination="mtD-vo-hLK" kind="relationship" relationship="viewControllers" id="xUW-yl-gvN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtN-N7-EMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="265"/>
+            <point key="canvasLocation" x="177" y="1010"/>
         </scene>
     </scenes>
 </document>

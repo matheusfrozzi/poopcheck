@@ -42,33 +42,10 @@ class CheckInViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         var currentUser = PFUser.currentUser()
-        
+
         if currentUser == nil {
-//            self.performSegueWithIdentifier("loginModal", sender: self)
+            self.performSegueWithIdentifier("loginModal", sender: self)
         }
-    }
-
-    func mapView(mapView: MKMapView!,
-        viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-            
-            if annotation is MKUserLocation {
-                return nil
-            }
-            
-            let reuseId = "pin"
-            
-            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-            if pinView == nil {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-
-                var image = UIImage(named:"toilet-icon")
-                pinView!.image = image
-            }
-            else {
-                pinView!.annotation = annotation
-            }
-            
-            return pinView
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,8 +58,10 @@ class CheckInViewController: UIViewController {
     }
 
     @IBAction func savePoop(sender: AnyObject) {
+        var currentUser = PFUser.currentUser()
+
         var poopClass = PoopManager()
-        poopClass.newPoop { (error) -> () in
+        poopClass.newPoop(currentUser!.objectId!) { (error) -> () in
             if(error == nil) {
                 println("Pooped with success")
             }
@@ -100,4 +79,25 @@ class CheckInViewController: UIViewController {
 
 }
 extension CheckInViewController: MKMapViewDelegate {
+    func mapView(mapView: MKMapView!,
+        viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+            if annotation is MKUserLocation {
+                return nil
+            }
+            
+            let reuseId = "pin"
+            
+            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
+            if pinView == nil {
+                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+                
+                var image = UIImage(named:"toilet-icon")
+                pinView!.image = image
+            }
+            else {
+                pinView!.annotation = annotation
+            }
+            
+            return pinView
+    }
 }

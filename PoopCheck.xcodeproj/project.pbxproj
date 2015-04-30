@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF18B29E1AEEBD97008B9ACC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18B29D1AEEBD97008B9ACC /* MapViewController.swift */; };
+		BF18B2A01AF1C2A4008B9ACC /* PinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF18B29F1AF1C2A4008B9ACC /* PinManager.swift */; };
 		BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */; };
 		BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */; };
 		BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252941AEAB033001B8F57 /* LoginViewController.swift */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF18B29D1AEEBD97008B9ACC /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BF18B29F1AF1C2A4008B9ACC /* PinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinManager.swift; sourceTree = "<group>"; };
 		BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopsViewController.swift; sourceTree = "<group>"; };
 		BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopTableViewCell.swift; sourceTree = "<group>"; };
 		BF3252941AEAB033001B8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 				BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */,
 				BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */,
 				BF3252941AEAB033001B8F57 /* LoginViewController.swift */,
+				BF18B29D1AEEBD97008B9ACC /* MapViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -237,6 +242,7 @@
 			children = (
 				BFAF80351AE86562007A3468 /* UserManager.swift */,
 				BFAF80371AE86573007A3468 /* PoopManager.swift */,
+				BF18B29F1AF1C2A4008B9ACC /* PinManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -344,10 +350,12 @@
 				BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */,
 				BFAF80361AE86562007A3468 /* UserManager.swift in Sources */,
 				BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */,
+				BF18B2A01AF1C2A4008B9ACC /* PinManager.swift in Sources */,
 				BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */,
 				BFAF803C1AE87722007A3468 /* CheckInViewController.swift in Sources */,
 				BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */,
 				BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */,
+				BF18B29E1AEEBD97008B9ACC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -492,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

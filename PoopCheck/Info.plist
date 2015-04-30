@@ -38,8 +38,21 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>FacebookAppID</key>
+	<string>1624564621091133</string>
+	<key>FacebookDisplayName</key>
+	<string>PoopCheck</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string></string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1624564621091133</string>
+			</array>
+		</dict>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -26,14 +26,15 @@ class PoopManager: NSObject {
 
         self.date = formatDate(dictionary.createdAt!, format: "dd/MM/yyyy")
         self.hour = formatDate(dictionary.createdAt!, format: "HH:mm")
+        self.location = dictionary["location"] as! PFGeoPoint
     }
 
-    func newPoop(callback: (error: NSError?) -> ()) {
+    func newPoop(userID: String, callback: (error: NSError?) -> ()) {
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
             if error == nil {
                 var nPoop = PFObject(className:"Poop")
-                nPoop["user"] = PFUser.objectWithoutDataWithObjectId("Gpkl45omXx")
+                nPoop["user"] = PFUser.objectWithoutDataWithObjectId(userID)
                 nPoop["location"] = geoPoint
 
                 nPoop.saveInBackgroundWithBlock {
@@ -48,10 +49,12 @@ class PoopManager: NSObject {
         }
     }
 
-    func getPoops(callback: (poopResult: NSArray?, error: NSError?) -> ()) {
+    func getPoops(userID: String, callback: (poopResult: NSArray?, error: NSError?) -> ()) {
         var query = PFQuery(className:"Poop")
-        //        query.whereKey("playerName", equalTo:"Sean Plott")
+        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
+
         var poopResultar: NSArray!
+
         query.findObjectsInBackgroundWithBlock {
             (objects, error) -> Void in
             if error == nil {
