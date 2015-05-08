@@ -12,6 +12,9 @@
 		BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */; };
 		BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */; };
 		BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252941AEAB033001B8F57 /* LoginViewController.swift */; };
+		BF47AD2F1AF94D19002BFDD1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47AD2E1AF94D19002BFDD1 /* GraphView.swift */; };
+		BF9BD1B71AFA76280082B724 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BD1B61AFA76280082B724 /* UserDefaultsManager.swift */; };
+		BF9BD1B91AFA84AF0082B724 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BD1B81AFA84AF0082B724 /* StatsViewController.swift */; };
 		BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */; };
 		BFAF7FF31AE8318C007A3468 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF11AE8318C007A3468 /* Main.storyboard */; };
 		BFAF7FF51AE8318C007A3468 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAF7FF41AE8318C007A3468 /* Images.xcassets */; };
@@ -58,6 +61,9 @@
 		BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopsViewController.swift; sourceTree = "<group>"; };
 		BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopTableViewCell.swift; sourceTree = "<group>"; };
 		BF3252941AEAB033001B8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF47AD2E1AF94D19002BFDD1 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		BF9BD1B61AFA76280082B724 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		BF9BD1B81AFA84AF0082B724 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		BFAF7FE81AE8318C007A3468 /* PoopCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoopCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAF7FEC1AE8318C007A3468 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAF7FED1AE8318C007A3468 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -224,6 +230,8 @@
 				BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */,
 				BF3252941AEAB033001B8F57 /* LoginViewController.swift */,
 				BF18B29D1AEEBD97008B9ACC /* MapViewController.swift */,
+				BF9BD1B81AFA84AF0082B724 /* StatsViewController.swift */,
+				BF47AD2E1AF94D19002BFDD1 /* GraphView.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -243,6 +251,7 @@
 				BFAF80351AE86562007A3468 /* UserManager.swift */,
 				BFAF80371AE86573007A3468 /* PoopManager.swift */,
 				BF18B29F1AF1C2A4008B9ACC /* PinManager.swift */,
+				BF9BD1B61AFA76280082B724 /* UserDefaultsManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -296,6 +305,7 @@
 				TargetAttributes = {
 					BFAF7FE71AE8318C007A3468 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 4NRYRR94WS;
 					};
 					BFAF7FFC1AE8318C007A3468 = {
 						CreatedOnToolsVersion = 6.3;
@@ -351,10 +361,13 @@
 				BFAF80361AE86562007A3468 /* UserManager.swift in Sources */,
 				BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */,
 				BF18B2A01AF1C2A4008B9ACC /* PinManager.swift in Sources */,
+				BF9BD1B71AFA76280082B724 /* UserDefaultsManager.swift in Sources */,
 				BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */,
+				BF47AD2F1AF94D19002BFDD1 /* GraphView.swift in Sources */,
 				BFAF803C1AE87722007A3468 /* CheckInViewController.swift in Sources */,
 				BFAF7FEE1AE8318C007A3468 /* AppDelegate.swift in Sources */,
 				BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */,
+				BF9BD1B91AFA84AF0082B724 /* StatsViewController.swift in Sources */,
 				BF18B29E1AEEBD97008B9ACC /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +497,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matheus Alberton (J8Q76YWZCV)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -493,6 +506,7 @@
 				INFOPLIST_FILE = PoopCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4b206e54-8561-4d8c-888d-6272758979ae";
 				SWIFT_OBJC_BRIDGING_HEADER = "./PoopCheck/header-bridge.h";
 			};
 			name = Debug;
@@ -501,7 +515,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Matheus Alberton";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -510,6 +524,7 @@
 				INFOPLIST_FILE = PoopCheck/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e6c598d1-1a3d-48e0-b800-86f31677c697";
 				SWIFT_OBJC_BRIDGING_HEADER = "./PoopCheck/header-bridge.h";
 			};
 			name = Release;

@@ -30,8 +30,6 @@ class UserManager: NSObject {
                 // Show the errorString somewhere and let the user try again.
             }
         }
-        
- 
     }
     
     func login(username: String, password: String) {
@@ -43,6 +41,23 @@ class UserManager: NSObject {
                 // The login failed. Check error to see why.
             }
 
+        }
+    }
+    
+    func getDateRegister() {
+        var currentUser = PFUser.currentUser()
+        
+        var query = PFUser.query()
+        query!.getObjectInBackgroundWithId(currentUser!.objectId!) {
+            (gameScore, error) -> Void in
+            if error == nil {
+                if UserDefaultsManager.getDateRegister == nil {
+                    println("welcome to the first time")
+                    UserDefaultsManager.getDateRegister = gameScore!.createdAt!
+                }
+            } else {
+                NSLog("%@", error!)
+            }
         }
     }
 }

@@ -68,6 +68,66 @@ class PoopManager: NSObject {
         }
     }
     
+    func getPoopsForGraph(userID: String, callback: (poopPoints: [Int]?, error: NSError?) ->()) {
+        let cal = NSCalendar.currentCalendar()
+        var date = cal.startOfDayForDate(NSDate())
+        
+        var days = [Int]()
+        var dateweek = cal.dateByAddingUnit(.CalendarUnitDay, value: -6, toDate: date, options: nil)!
+
+        var query = PFQuery(className:"Poop")
+        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
+        query.whereKey("createdAt", greaterThan: dateweek)
+
+        var graphPoints:[Int] = []
+
+        query.findObjectsInBackgroundWithBlock {
+            (objects, error) -> Void in
+            if error == nil {
+                for i in 0...6 {
+                    let day = cal.component(.CalendarUnitDay, fromDate: date)
+                    days.append(day)
+                    
+                    date = cal.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: date, options: nil)!
+                    var teste = false
+                    var aux = 0
+
+                    for j in 0...objects!.count-1 {
+                        let day2 = cal.component(.CalendarUnitDay, fromDate: objects![j].createdAt)
+
+                        if(day == day2) {
+                            aux = aux + 1
+                            if(teste == true) {
+                                
+                            } else {
+//                                println(day)
+                            }
+//                            println("1")
+//                            graphPoints.insert(1, atIndex: i)
+                            teste = true
+                        } else {
+                            if(teste == false) {
+                                teste = true
+                                
+//                                println(day)
+                            } else {
+                                
+                            }
+                        }
+                    }
+                    
+                    graphPoints.insert(aux, atIndex: i)
+                }
+
+                callback(poopPoints: graphPoints.reverse(), error: nil)
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error!.userInfo!)")
+                callback(poopPoints: nil, error: error!)
+            }
+        }
+    }
+
     func formatDate(date: NSDate, format: String) -> String {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = format

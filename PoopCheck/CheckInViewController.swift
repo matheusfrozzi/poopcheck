@@ -26,9 +26,7 @@ class CheckInViewController: UIViewController {
                     longitude: geoPoint!.longitude
                 )
 
-                let span = MKCoordinateSpanMake(0.01, 0.01)
-                let region = MKCoordinateRegion(center: location, span: span)
-                self.mapView.setRegion(region, animated: true)
+                self.centerMapOnLocation(location)
 
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = location
@@ -38,8 +36,11 @@ class CheckInViewController: UIViewController {
                 self.mapView.addAnnotation(annotation)
             }
         }
+        
+        var user = UserManager()
+        user.getDateRegister()
     }
-    
+
     override func viewDidAppear(animated: Bool) {
         var currentUser = PFUser.currentUser()
 
@@ -51,11 +52,6 @@ class CheckInViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,regionRadius * 2.0, regionRadius * 2.0)
-        mapView.setRegion(coordinateRegion, animated: true)
-    }
 
     @IBAction func savePoop(sender: AnyObject) {
         var currentUser = PFUser.currentUser()
@@ -64,9 +60,18 @@ class CheckInViewController: UIViewController {
         poopClass.newPoop(currentUser!.objectId!) { (error) -> () in
             if(error == nil) {
                 println("Pooped with success")
+            } else {
+                println("whats")
             }
         }
     }
+    
+    func centerMapOnLocation(location: CLLocationCoordinate2D) {
+        let span = MKCoordinateSpanMake(0.001, 0.001)
+        let region = MKCoordinateRegion(center: location, span: span)
+        self.mapView.setRegion(region, animated: true)
+    }
+
     /*
     // MARK: - Navigation
 
@@ -79,25 +84,28 @@ class CheckInViewController: UIViewController {
 
 }
 extension CheckInViewController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView!,
-        viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-            if annotation is MKUserLocation {
-                return nil
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if let annotation = annotation as? PinManager {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+                as? MKPinAnnotationView { // 2
+                    dequeuedView.annotation = annotation
+                    view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                //                view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIView
             }
             
-            let reuseId = "pin"
+            view.image = UIImage(named:"toilet-icon")
             
-            var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId) as? MKPinAnnotationView
-            if pinView == nil {
-                pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
-                
-                var image = UIImage(named:"toilet-icon")
-                pinView!.image = image
-            }
-            else {
-                pinView!.annotation = annotation
-            }
+            //            view.pinColor = annotation.pinColor()
             
-            return pinView
+            return view
+        }
+        return nil
     }
 }
