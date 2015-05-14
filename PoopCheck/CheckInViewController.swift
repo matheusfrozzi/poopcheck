@@ -15,8 +15,12 @@ class CheckInViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
 
+    @IBOutlet weak var poopButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        poopButton.layer.cornerRadius = poopButton.frame.size.width / 2;
+        poopButton.clipsToBounds = true;
 
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
@@ -37,8 +41,8 @@ class CheckInViewController: UIViewController {
             }
         }
         
-        var user = UserManager()
-        user.getDateRegister()
+//        var user = UserManager()
+//        user.getDateRegister()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -70,6 +74,9 @@ class CheckInViewController: UIViewController {
         let span = MKCoordinateSpanMake(0.001, 0.001)
         let region = MKCoordinateRegion(center: location, span: span)
         self.mapView.setRegion(region, animated: true)
+    }
+    
+    @IBAction func backLogout(sender: UIStoryboardSegue) {
     }
 
     /*

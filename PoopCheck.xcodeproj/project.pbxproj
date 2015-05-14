@@ -12,6 +12,7 @@
 		BF3252911AE96BBE001B8F57 /* PoopsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */; };
 		BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */; };
 		BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3252941AEAB033001B8F57 /* LoginViewController.swift */; };
+		BF4217371B04E7E000468469 /* ConfigTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF4217361B04E7E000468469 /* ConfigTableViewController.swift */; };
 		BF47AD2F1AF94D19002BFDD1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF47AD2E1AF94D19002BFDD1 /* GraphView.swift */; };
 		BF9BD1B71AFA76280082B724 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BD1B61AFA76280082B724 /* UserDefaultsManager.swift */; };
 		BF9BD1B91AFA84AF0082B724 /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BD1B81AFA84AF0082B724 /* StatsViewController.swift */; };
@@ -61,6 +62,7 @@
 		BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopsViewController.swift; sourceTree = "<group>"; };
 		BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopTableViewCell.swift; sourceTree = "<group>"; };
 		BF3252941AEAB033001B8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BF4217361B04E7E000468469 /* ConfigTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigTableViewController.swift; sourceTree = "<group>"; };
 		BF47AD2E1AF94D19002BFDD1 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		BF9BD1B61AFA76280082B724 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		BF9BD1B81AFA84AF0082B724 /* StatsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				BFAF803B1AE87722007A3468 /* CheckInViewController.swift */,
+				BF4217361B04E7E000468469 /* ConfigTableViewController.swift */,
 				BF3252901AE96BBE001B8F57 /* PoopsViewController.swift */,
 				BF3252921AE96C24001B8F57 /* PoopTableViewCell.swift */,
 				BF3252941AEAB033001B8F57 /* LoginViewController.swift */,
@@ -360,6 +363,7 @@
 				BF3252951AEAB033001B8F57 /* LoginViewController.swift in Sources */,
 				BFAF80361AE86562007A3468 /* UserManager.swift in Sources */,
 				BF3252931AE96C24001B8F57 /* PoopTableViewCell.swift in Sources */,
+				BF4217371B04E7E000468469 /* ConfigTableViewController.swift in Sources */,
 				BF18B2A01AF1C2A4008B9ACC /* PinManager.swift in Sources */,
 				BF9BD1B71AFA76280082B724 /* UserDefaultsManager.swift in Sources */,
 				BFAF80381AE86573007A3468 /* PoopManager.swift in Sources */,

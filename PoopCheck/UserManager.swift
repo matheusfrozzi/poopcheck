@@ -49,11 +49,11 @@ class UserManager: NSObject {
         
         var query = PFUser.query()
         query!.getObjectInBackgroundWithId(currentUser!.objectId!) {
-            (gameScore, error) -> Void in
+            (object, error) -> Void in
             if error == nil {
                 if UserDefaultsManager.getDateRegister == nil {
                     println("welcome to the first time")
-                    UserDefaultsManager.getDateRegister = gameScore!.createdAt!
+                    UserDefaultsManager.getDateRegister = object!.createdAt!
                 }
             } else {
                 NSLog("%@", error!)

@@ -26,13 +26,18 @@ class LoginViewController: UIViewController {
             if let user = user {
                 if user.isNew {
                     println("User signed up and logged in through Facebook!")
+                    UserDefaultsManager.getDateRegister = NSDate()
                     self.dismissViewControllerAnimated(true, completion: {});
                 } else {
                     println("User logged in through Facebook!")
                     self.dismissViewControllerAnimated(true, completion: {});
                 }
             } else {
-                println("Uh oh. The user cancelled the Facebook login.")
+                let alert = UIAlertView()
+                alert.title = "Sorry!"
+                alert.message = "You cancelled the Facebook login."
+                alert.addButtonWithTitle("Dismiss")
+                alert.show()
             }
         })
     }

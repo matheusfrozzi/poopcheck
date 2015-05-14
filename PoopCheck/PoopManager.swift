@@ -24,9 +24,12 @@ class PoopManager: NSObject {
     init(dictionary : PFObject) {
         super.init()
 
-        self.date = formatDate(dictionary.createdAt!, format: "dd/MM/yyyy")
-        self.hour = formatDate(dictionary.createdAt!, format: "HH:mm")
+//        self.date = formatDate(dictionary.createdAt!, format: "dd/MM/yyyy")
+//        self.hour = formatDate(dictionary.createdAt!, format: "HH:mm")
         self.location = dictionary["location"] as! PFGeoPoint
+        
+        self.date = formatDate(dictionary["localDate"] as! NSDate, format: "dd/MM/yyyy")
+        self.hour = formatDate(dictionary["localDate"] as! NSDate, format: "HH:mm")
     }
 
     func newPoop(userID: String, callback: (error: NSError?) -> ()) {
@@ -36,8 +39,10 @@ class PoopManager: NSObject {
                 var nPoop = PFObject(className:"Poop")
                 nPoop["user"] = PFUser.objectWithoutDataWithObjectId(userID)
                 nPoop["location"] = geoPoint
-
-                nPoop.saveInBackgroundWithBlock {
+                nPoop["localDate"] = NSDate()
+                
+                
+                nPoop.pinInBackgroundWithBlock {
                     (success: Bool, error: NSError?) -> Void in
                     if (success) {
                         callback(error: nil)
@@ -45,12 +50,25 @@ class PoopManager: NSObject {
                         callback(error: error)
                     }
                 }
+//
+//                nPoop.saveInBackgroundWithBlock {
+//                    (success: Bool, error: NSError?) -> Void in
+//                    if (success) {
+//                        callback(error: nil)
+//                    } else {
+//                        callback(error: error)
+//                    }
+//                }
             }
         }
     }
 
     func getPoops(userID: String, callback: (poopResult: NSArray?, error: NSError?) -> ()) {
         var query = PFQuery(className:"Poop")
+        var saveQuery = PFObject(className:"Poop")
+//        saveQuery.un
+        query.fromLocalDatastore()
+
         query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
 
         var poopResultar: NSArray!
@@ -60,6 +78,9 @@ class PoopManager: NSObject {
             if error == nil {
                 poopResultar = objects!
                 callback(poopResult: poopResultar, error: nil)
+//                println(objects!)
+//                PFObject.pinAllInBackground(objects)
+//                saveQuery.saveEventually()
             } else {
                 // Log details of the failure
                 println("Error: \(error) \(error!.userInfo!)")
@@ -76,8 +97,10 @@ class PoopManager: NSObject {
         var dateweek = cal.dateByAddingUnit(.CalendarUnitDay, value: -6, toDate: date, options: nil)!
 
         var query = PFQuery(className:"Poop")
+        query.fromLocalDatastore()
+
         query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
-        query.whereKey("createdAt", greaterThan: dateweek)
+        query.whereKey("localDate", greaterThan: dateweek)
 
         var graphPoints:[Int] = []
 
@@ -93,7 +116,8 @@ class PoopManager: NSObject {
                     var aux = 0
 
                     for j in 0...objects!.count-1 {
-                        let day2 = cal.component(.CalendarUnitDay, fromDate: objects![j].createdAt)
+//                        let day2 = cal.component(.CalendarUnitDay, fromDate: objects![j].createdAt)
+                        let day2 = cal.component(.CalendarUnitDay, fromDate: objects![j]["localDate"] as! NSDate)
 
                         if(day == day2) {
                             aux = aux + 1
