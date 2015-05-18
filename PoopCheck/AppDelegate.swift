@@ -63,7 +63,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+    
+    func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        if let userInfo = userInfo, request = userInfo["request"] as? String {
+//            let poop = PoopManager()
+//            poop.newPoop("lalala", callback: { (error) -> () in
+//                if(error == nil) {
+//                    reply(["reply":"Ok work"])
+//                } else {
+//                    reply(["reply":"Error, but it wont reply"])
+//                }
+//            })
+            var currentUser = PFUser.currentUser()
+            
+            println("localizando")
 
+            PFGeoPoint.geoPointForCurrentLocationInBackground {
+                (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
+                if error == nil {
+                    var nPoop = PFObject(className:"Poop")
+                    nPoop["user"] = currentUser
+                    nPoop["location"] = geoPoint
+                    nPoop["localDate"] = NSDate()
+                    
+                    nPoop.save()
+                    reply(["reply":"Ok work"])
+                }
+            }
+        }
+    }
 
 }
 

@@ -54,11 +54,11 @@ class StatsViewController: UIViewController {
         poopClass.getPoops(currentUser!.objectId!, callback: { (myArray, error) -> () in
             if(error == nil) {
                 var sum = 0.0
-                sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()))
+                sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
                 
                 let nf = NSNumberFormatter()
                 nf.numberStyle = .DecimalStyle
-
+ 
                 self.average.text = NSString(format: "%.1f", sum) as String //nf.stringFromNumber(f)
                 self.average.hidden = false
             }

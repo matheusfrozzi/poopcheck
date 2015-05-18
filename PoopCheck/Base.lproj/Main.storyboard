@@ -136,89 +136,6 @@
             </objects>
             <point key="canvasLocation" x="1855" y="280"/>
         </scene>
-        <!--MyPoops-->
-        <scene sceneID="klV-Dm-osM">
-            <objects>
-                <viewController id="aZW-z6-2UN" customClass="PoopsViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0ob-Ec-4ap"/>
-                        <viewControllerLayoutGuide type="bottom" id="tjr-Mo-HZk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zUQ-YZ-OOV">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="70" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-rf-c6p">
-                                <rect key="frame" x="0.0" y="24" width="600" height="576"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Poops" rowHeight="70" id="wl9-IQ-9nH" customClass="PoopTableViewCell" customModule="PoopCheck" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wl9-IQ-9nH" id="9jr-Gt-ejz">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:30 p.m." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8jp-mf-nT8">
-                                                    <rect key="frame" x="8" y="35" width="67" height="17"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday, 24/04/15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e2-i8-pjU">
-                                                    <rect key="frame" x="8" y="16" width="139" height="19"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="8e2-i8-pjU" firstAttribute="leading" secondItem="9jr-Gt-ejz" secondAttribute="leadingMargin" id="0zM-2K-cjy"/>
-                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="bottom" secondItem="9jr-Gt-ejz" secondAttribute="bottomMargin" id="7ph-31-II8"/>
-                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="leading" secondItem="8e2-i8-pjU" secondAttribute="leading" id="KMw-8n-NsS"/>
-                                                <constraint firstItem="8jp-mf-nT8" firstAttribute="top" secondItem="8e2-i8-pjU" secondAttribute="bottom" id="RdK-og-kyG"/>
-                                                <constraint firstItem="8e2-i8-pjU" firstAttribute="top" secondItem="9jr-Gt-ejz" secondAttribute="topMargin" constant="8" id="lJI-aE-ORe"/>
-                                            </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="7ph-31-II8"/>
-                                                </mask>
-                                            </variation>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="date" destination="8e2-i8-pjU" id="HMJ-ku-yi3"/>
-                                            <outlet property="hour" destination="8jp-mf-nT8" id="apD-K9-TJa"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="aZW-z6-2UN" id="VOR-37-dsN"/>
-                                    <outlet property="delegate" destination="aZW-z6-2UN" id="lmF-Fr-Xkx"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="top" secondItem="zUQ-YZ-OOV" secondAttribute="top" constant="24" id="7pa-mx-XG3"/>
-                            <constraint firstItem="Jxg-rf-c6p" firstAttribute="leading" secondItem="zUQ-YZ-OOV" secondAttribute="leading" id="EBM-cL-A8q"/>
-                            <constraint firstAttribute="bottom" secondItem="Jxg-rf-c6p" secondAttribute="bottom" id="ZWm-BC-u6t"/>
-                            <constraint firstAttribute="trailing" secondItem="Jxg-rf-c6p" secondAttribute="trailing" id="ntd-WS-Pgx"/>
-                            <constraint firstItem="tjr-Mo-HZk" firstAttribute="top" secondItem="Jxg-rf-c6p" secondAttribute="bottom" id="xfk-qM-YEu"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="ZWm-BC-u6t"/>
-                            </mask>
-                        </variation>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="MyPoops" id="2Ge-vm-dc3"/>
-                    <connections>
-                        <outlet property="tableView" destination="Jxg-rf-c6p" id="NCQ-uk-CCu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="exW-3V-V7N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1042" y="1010"/>
-        </scene>
         <!--Config-->
         <scene sceneID="Ibx-ZR-GyO">
             <objects>
@@ -226,7 +143,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="L9m-Pu-1ky">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="429-zc-TcD">
                                 <cells>
@@ -292,25 +209,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poop Average" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlJ-Sb-0oj">
                                 <rect key="frame" x="236" y="28" width="129" height="25"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssD-R8-OU4">
                                 <rect key="frame" x="247" y="61" width="106" height="90"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="76"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="per day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSd-3n-RkN">
                                 <rect key="frame" x="282" y="159" width="36" height="13"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats of week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-fm-TWU">
                                 <rect key="frame" x="250" y="215" width="100" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAA-bH-XCR" customClass="GraphView" customModule="PoopCheck" customModuleProvider="target">
@@ -435,43 +352,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnc-fl-IPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="2474"/>
-        </scene>
-        <!--Poop Map-->
-        <scene sceneID="GVE-fY-F9k">
-            <objects>
-                <viewController id="mtD-vo-hLK" customClass="MapViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ubm-aY-hIY"/>
-                        <viewControllerLayoutGuide type="bottom" id="fyq-1z-QMn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oVQ-G3-kEB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m2L-yn-ked">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <outlet property="delegate" destination="mtD-vo-hLK" id="vMU-fK-C3v"/>
-                                </connections>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="m2L-yn-ked" firstAttribute="top" secondItem="oVQ-G3-kEB" secondAttribute="top" id="Ewx-3J-6u1"/>
-                            <constraint firstAttribute="trailing" secondItem="m2L-yn-ked" secondAttribute="trailing" id="KEO-UM-Pae"/>
-                            <constraint firstAttribute="bottom" secondItem="m2L-yn-ked" secondAttribute="bottom" id="PHa-ev-nHg"/>
-                            <constraint firstItem="m2L-yn-ked" firstAttribute="leading" secondItem="oVQ-G3-kEB" secondAttribute="leading" id="oHx-Nk-LSn"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Poop Map" id="PQS-iH-3Zx"/>
-                    <connections>
-                        <outlet property="mapView" destination="m2L-yn-ked" id="xmd-9L-CYn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efO-No-itV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1043" y="1755"/>
+            <point key="canvasLocation" x="1043" y="1010"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="i65-b2-ehr">
@@ -490,7 +371,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtN-N7-EMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="1411"/>
+            <point key="canvasLocation" x="172" y="651"/>
         </scene>
         <!--Poop-->
         <scene sceneID="hbD-OO-uJs">

@@ -30,6 +30,10 @@ class LoginViewController: UIViewController {
                     self.dismissViewControllerAnimated(true, completion: {});
                 } else {
                     println("User logged in through Facebook!")
+                    if UserDefaultsManager.getDateRegister == nil {
+                        println("welcome to the first time")
+                        UserDefaultsManager.getDateRegister = NSDate()
+                    }
                     self.dismissViewControllerAnimated(true, completion: {});
                 }
             } else {
