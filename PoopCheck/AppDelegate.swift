@@ -65,33 +65,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        if let userInfo = userInfo, request = userInfo["request"] as? String {
-//            let poop = PoopManager()
-//            poop.newPoop("lalala", callback: { (error) -> () in
-//                if(error == nil) {
-//                    reply(["reply":"Ok work"])
-//                } else {
-//                    reply(["reply":"Error, but it wont reply"])
-//                }
-//            })
-            var currentUser = PFUser.currentUser()
-            
-            println("localizando")
 
-            PFGeoPoint.geoPointForCurrentLocationInBackground {
-                (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
-                if error == nil {
-                    var nPoop = PFObject(className:"Poop")
-                    nPoop["user"] = currentUser
-                    nPoop["location"] = geoPoint
-                    nPoop["localDate"] = NSDate()
-                    
-                    nPoop.save()
-                    reply(["reply":"Ok work"])
-                }
+        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
+        var bgTask = UIBackgroundTaskIdentifier()
+        bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler { () -> Void in
+            
+
+            UIApplication.sharedApplication().endBackgroundTask(bgTask)
+            bgTask = UIBackgroundTaskInvalid
+        }
+        if let userInfo = userInfo, request = userInfo["request"] as? String {
+            var currentUser = PFUser.currentUser()
+
+            PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint, error) -> Void in
+                var nPoop = PFObject(className:"Poop")
+                nPoop["user"] = currentUser
+                nPoop["location"] = geoPoint
+                nPoop["localDate"] = NSDate()
+                
+                nPoop.pin()
+                reply(["reply":"Ok work"])
+                
+                UIApplication.sharedApplication().endBackgroundTask(bgTask)
+                bgTask = UIBackgroundTaskInvalid
             }
         }
     }
-
 }
-
