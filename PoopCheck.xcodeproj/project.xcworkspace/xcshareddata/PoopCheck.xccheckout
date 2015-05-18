@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7DF5C500-EBCF-4CF2-B9F4-FF2FDCB10062</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PoopCheck</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>23B2882DE8EB567214EC8830FE9DD56BCE861F75</key>
+		<string>https://github.com/matheusfrozzi/poopcheck.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PoopCheck.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>23B2882DE8EB567214EC8830FE9DD56BCE861F75</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/matheusfrozzi/poopcheck.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>23B2882DE8EB567214EC8830FE9DD56BCE861F75</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>23B2882DE8EB567214EC8830FE9DD56BCE861F75</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PoopCheck</string>
+		</dict>
+	</array>
+</dict>
+</plist>
