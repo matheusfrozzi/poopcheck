@@ -37,16 +37,13 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func makePoop() {
-        println("clicou")
-        var request = ["request": "pushEmoji"]
+        var request = ["request": "newPoop"]
         
         WKInterfaceController.openParentApplication(request, reply: { (replyFromParent, error) -> Void in
             if(error != nil) {
                 println("there was an error receiving a reply")
             } else {
                 self.textLabel.setText("You pooped today")
-                println("Ok")
-                println(replyFromParent)
             }
         })
     }

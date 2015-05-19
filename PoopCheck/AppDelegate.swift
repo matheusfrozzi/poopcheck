@@ -66,29 +66,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
 
-        UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
-        var bgTask = UIBackgroundTaskIdentifier()
-        bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler { () -> Void in
-            
+        var currentUser = PFUser.currentUser()
 
-            UIApplication.sharedApplication().endBackgroundTask(bgTask)
-            bgTask = UIBackgroundTaskInvalid
-        }
         if let userInfo = userInfo, request = userInfo["request"] as? String {
-            var currentUser = PFUser.currentUser()
 
-            PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint, error) -> Void in
-                var nPoop = PFObject(className:"Poop")
-                nPoop["user"] = currentUser
-                nPoop["location"] = geoPoint
-                nPoop["localDate"] = NSDate()
+            UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
+            var bgTask = UIBackgroundTaskIdentifier()
+            bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler { () -> Void in
                 
-                nPoop.pin()
-                reply(["reply":"Ok work"])
-                
+
                 UIApplication.sharedApplication().endBackgroundTask(bgTask)
                 bgTask = UIBackgroundTaskInvalid
             }
+
+            if(request == "newPoop") {
+                PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint, error) -> Void in
+                    var nPoop = PFObject(className:"Poop")
+                    nPoop["user"] = currentUser
+                    nPoop["location"] = geoPoint
+                    nPoop["localDate"] = NSDate()
+                    
+                    nPoop.pin()
+                    reply(["reply":"new poop"])
+                    
+                    UIApplication.sharedApplication().endBackgroundTask(bgTask)
+                    bgTask = UIBackgroundTaskInvalid
+                }
+            } else if(request == "getAverage") {
+                var poopClass = PoopManager()
+                
+                poopClass.getPoops(currentUser!.objectId!, callback: { (myArray, error) -> () in
+                    if(error == nil) {
+                        var sum = 0.0
+                        sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
+                        
+                        reply(["reply": sum])
+                    }
+                })
+            }
         }
+    }
+    func betweenDays(date1:NSDate, date2:NSDate) -> Int {
+        let startDate:NSDate = date1
+        let endDate:NSDate = date2
+        
+        let cal = NSCalendar.currentCalendar()
+        let unit:NSCalendarUnit = .CalendarUnitDay
+        let components = cal.components(unit, fromDate: startDate, toDate: endDate, options: nil)
+        
+        return components.day
     }
 }

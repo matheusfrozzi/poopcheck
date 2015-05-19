@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Average Interface Controller-->
         <scene sceneID="mzP-A5-EHY">
             <objects>
-                <controller id="nCa-Bo-SMv">
+                <controller id="nCa-Bo-SMv" customClass="AverageInterfaceController" customModule="PoopCheck_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Poop Average" textAlignment="center" id="RKH-pX-X8M"/>
                         <label alignment="center" verticalAlignment="center" text="1.0" id="pZO-Lc-MUw">
@@ -40,6 +40,9 @@
                             <fontDescription key="font" type="system" pointSize="14"/>
                         </label>
                     </items>
+                    <connections>
+                        <outlet property="averageLabel" destination="pZO-Lc-MUw" id="iEc-IJ-QFB"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="455" y="347"/>
