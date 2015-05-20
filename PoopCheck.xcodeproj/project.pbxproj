@@ -44,13 +44,8 @@
 		BFB12C1A1AEACAE900B8A09F /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */; };
 		BFB12C1B1AEACAE900B8A09F /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */; };
 		BFB12C1C1AEACAE900B8A09F /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */; };
-		BFEEE2331B051CC400A62319 /* poopCheckWatchKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEEE2321B051CC400A62319 /* poopCheckWatchKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BFEEE2391B051CC400A62319 /* poopCheckWatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */; };
 		BFEEE2421B051CC400A62319 /* poopCheckWatchKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEEE2411B051CC400A62319 /* poopCheckWatchKitTests.swift */; };
 		BFEEE2501B051D7200A62319 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEEE24F1B051D7200A62319 /* WatchKit.framework */; };
-		BFEEE2511B051DF700A62319 /* poopCheckWatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */; };
-		BFEEE2521B051DF700A62319 /* poopCheckWatchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BFEEE2581B052A7F00A62319 /* poopControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEEE2571B052A7F00A62319 /* poopControl.swift */; };
 		BFEEE25B1B0A0FC200A62319 /* PoopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF80371AE86573007A3468 /* PoopManager.swift */; };
 		BFF2D3411B050C7B00925FA6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF2D3401B050C7B00925FA6 /* InterfaceController.swift */; };
 		BFF2D3431B050C7B00925FA6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF2D3421B050C7B00925FA6 /* NotificationController.swift */; };
@@ -70,26 +65,12 @@
 			remoteGlobalIDString = BFAF7FE71AE8318C007A3468;
 			remoteInfo = PoopCheck;
 		};
-		BFEEE23A1B051CC400A62319 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFAF7FE01AE8318C007A3468 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFEEE22D1B051CC400A62319;
-			remoteInfo = poopCheckWatchKit;
-		};
 		BFEEE23C1B051CC400A62319 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFAF7FE01AE8318C007A3468 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = BFAF7FE71AE8318C007A3468;
 			remoteInfo = PoopCheck;
-		};
-		BFEEE2531B051DF700A62319 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFAF7FE01AE8318C007A3468 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BFEEE22D1B051CC400A62319;
-			remoteInfo = poopCheckWatchKit;
 		};
 		BFF2D34C1B050C7B00925FA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -114,7 +95,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BFEEE2521B051DF700A62319 /* poopCheckWatchKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +156,6 @@
 		BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = poopCheckWatchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEEE2311B051CC400A62319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEEE2321B051CC400A62319 /* poopCheckWatchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = poopCheckWatchKit.h; sourceTree = "<group>"; };
 		BFEEE2381B051CC400A62319 /* poopCheckWatchKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poopCheckWatchKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,7 +200,6 @@
 				BFAF80191AE8347F007A3468 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				BFAF801A1AE8347F007A3468 /* ParseFacebookUtils.framework in Frameworks */,
 				BFAF801B1AE8347F007A3468 /* Parse.framework in Frameworks */,
-				BFEEE2511B051DF700A62319 /* poopCheckWatchKit.framework in Frameworks */,
 				BFAF80171AE8347F007A3468 /* ParseCrashReporting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,18 +211,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFEEE22A1B051CC400A62319 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BFEEE2351B051CC400A62319 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFEEE2391B051CC400A62319 /* poopCheckWatchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +250,6 @@
 				BFAF7FFD1AE8318C007A3468 /* PoopCheckTests.xctest */,
 				BFF2D33B1B050C7B00925FA6 /* PoopCheck WatchKit Extension.appex */,
 				BFF2D34A1B050C7B00925FA6 /* PoopCheck WatchKit App.app */,
-				BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */,
 				BFEEE2381B051CC400A62319 /* poopCheckWatchKitTests.xctest */,
 			);
 			name = Products;
@@ -465,17 +434,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		BFEEE22B1B051CC400A62319 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFEEE2331B051CC400A62319 /* poopCheckWatchKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		BFAF7FE71AE8318C007A3468 /* PoopCheck */ = {
 			isa = PBXNativeTarget;
@@ -491,7 +449,6 @@
 			);
 			dependencies = (
 				BFF2D3571B050C7B00925FA6 /* PBXTargetDependency */,
-				BFEEE2541B051DF700A62319 /* PBXTargetDependency */,
 			);
 			name = PoopCheck;
 			productName = PoopCheck;
@@ -516,24 +473,6 @@
 			productReference = BFAF7FFD1AE8318C007A3468 /* PoopCheckTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BFEEE22D1B051CC400A62319 /* poopCheckWatchKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BFEEE24B1B051CC400A62319 /* Build configuration list for PBXNativeTarget "poopCheckWatchKit" */;
-			buildPhases = (
-				BFEEE2291B051CC400A62319 /* Sources */,
-				BFEEE22A1B051CC400A62319 /* Frameworks */,
-				BFEEE22B1B051CC400A62319 /* Headers */,
-				BFEEE22C1B051CC400A62319 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = poopCheckWatchKit;
-			productName = poopCheckWatchKit;
-			productReference = BFEEE22E1B051CC400A62319 /* poopCheckWatchKit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		BFEEE2371B051CC400A62319 /* poopCheckWatchKitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFEEE24D1B051CC400A62319 /* Build configuration list for PBXNativeTarget "poopCheckWatchKitTests" */;
@@ -545,7 +484,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				BFEEE23B1B051CC400A62319 /* PBXTargetDependency */,
 				BFEEE23D1B051CC400A62319 /* PBXTargetDependency */,
 			);
 			name = poopCheckWatchKitTests;
@@ -608,10 +546,6 @@
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = BFAF7FE71AE8318C007A3468;
 					};
-					BFEEE22D1B051CC400A62319 = {
-						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 4NRYRR94WS;
-					};
 					BFEEE2371B051CC400A62319 = {
 						CreatedOnToolsVersion = 6.3.1;
 						TestTargetID = BFAF7FE71AE8318C007A3468;
@@ -643,7 +577,6 @@
 				BFAF7FFC1AE8318C007A3468 /* PoopCheckTests */,
 				BFF2D33A1B050C7B00925FA6 /* PoopCheck WatchKit Extension */,
 				BFF2D3491B050C7B00925FA6 /* PoopCheck WatchKit App */,
-				BFEEE22D1B051CC400A62319 /* poopCheckWatchKit */,
 				BFEEE2371B051CC400A62319 /* poopCheckWatchKitTests */,
 			);
 		};
@@ -661,13 +594,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		BFAF7FFB1AE8318C007A3468 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFEEE22C1B051CC400A62319 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -730,14 +656,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BFEEE2291B051CC400A62319 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFEEE2581B052A7F00A62319 /* poopControl.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BFEEE2341B051CC400A62319 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -765,20 +683,10 @@
 			target = BFAF7FE71AE8318C007A3468 /* PoopCheck */;
 			targetProxy = BFAF7FFE1AE8318C007A3468 /* PBXContainerItemProxy */;
 		};
-		BFEEE23B1B051CC400A62319 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFEEE22D1B051CC400A62319 /* poopCheckWatchKit */;
-			targetProxy = BFEEE23A1B051CC400A62319 /* PBXContainerItemProxy */;
-		};
 		BFEEE23D1B051CC400A62319 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BFAF7FE71AE8318C007A3468 /* PoopCheck */;
 			targetProxy = BFEEE23C1B051CC400A62319 /* PBXContainerItemProxy */;
-		};
-		BFEEE2541B051DF700A62319 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BFEEE22D1B051CC400A62319 /* poopCheckWatchKit */;
-			targetProxy = BFEEE2531B051DF700A62319 /* PBXContainerItemProxy */;
 		};
 		BFF2D34D1B050C7B00925FA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -975,55 +883,6 @@
 			};
 			name = Release;
 		};
-		BFEEE2471B051CC400A62319 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = poopCheckWatchKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BFEEE2481B051CC400A62319 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = poopCheckWatchKit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		BFEEE2491B051CC400A62319 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1146,15 +1005,6 @@
 			buildConfigurations = (
 				BFAF800B1AE8318C007A3468 /* Debug */,
 				BFAF800C1AE8318C007A3468 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BFEEE24B1B051CC400A62319 /* Build configuration list for PBXNativeTarget "poopCheckWatchKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BFEEE2471B051CC400A62319 /* Debug */,
-				BFEEE2481B051CC400A62319 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
