@@ -28,9 +28,9 @@ class AverageInterfaceController: WKInterfaceController {
             if(error != nil) {
                 println("there was an error receiving a reply")
             } else {
-                let nf = NSNumberFormatter()
-                nf.numberStyle = .DecimalStyle
-                self.averageLabel.setText(nf.stringFromNumber(replyFromParent["reply"]! as! NSNumber))
+                let average : String = (replyFromParent["reply"] as? String)!
+                self.averageLabel.setText(average)
+                self.averageLabel.setHidden(false)
             }
         })
     }

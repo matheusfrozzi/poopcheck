@@ -17,15 +17,17 @@ class StatsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadAverage()
-        graphDisplay()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
+    override func viewWillAppear(animated: Bool) {
+        loadAverage()
+        graphDisplay()
+    }
+
     func graphDisplay() {
         self.loadGraphPoints()
 
@@ -81,10 +83,14 @@ class StatsViewController: UIViewController {
         var currentUser = PFUser.currentUser()
 
         poopClass.getPoopsForGraph(currentUser!.objectId!, callback: { (poopPoints, error) -> () in
-            self.graphView.graphPoints = poopPoints!
-            self.maxLabel.text = "\(maxElement(self.graphView.graphPoints))"
-            self.graphView.setNeedsDisplay()
-            self.graphView.hidden = false
+            if(poopPoints!.count == 0) {
+                println("CERTA RESPOSTA")
+            } else {
+                self.graphView.graphPoints = poopPoints!
+                self.maxLabel.text = "\(maxElement(self.graphView.graphPoints))"
+                self.graphView.setNeedsDisplay()
+                self.graphView.hidden = false
+            }
         })
     }
     /*

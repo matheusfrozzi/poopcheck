@@ -99,8 +99,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     if(error == nil) {
                         var sum = 0.0
                         sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
-                        
-                        reply(["reply": sum])
+
+                        reply(["reply": NSString(format: "%.1f", sum) as String])
                     }
                 })
             }

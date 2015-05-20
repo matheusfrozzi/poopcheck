@@ -14,8 +14,6 @@ class InterfaceController: WKInterfaceController {
 
     @IBOutlet weak var poopButton: WKInterfaceButton!
     @IBOutlet weak var textLabel: WKInterfaceLabel!
-    
-    let poop = poopControl()
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)

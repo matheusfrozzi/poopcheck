@@ -33,7 +33,7 @@
                 <controller id="nCa-Bo-SMv" customClass="AverageInterfaceController" customModule="PoopCheck_WatchKit_Extension">
                     <items>
                         <label width="1" alignment="left" text="Poop Average" textAlignment="center" id="RKH-pX-X8M"/>
-                        <label alignment="center" verticalAlignment="center" text="1.0" id="pZO-Lc-MUw">
+                        <label alignment="center" verticalAlignment="center" hidden="YES" text="1.0" id="pZO-Lc-MUw">
                             <fontDescription key="font" type="system" pointSize="52"/>
                         </label>
                         <label alignment="center" verticalAlignment="center" text="per day" id="rZ4-SO-XLn">
