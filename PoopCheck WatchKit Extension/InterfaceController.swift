@@ -8,7 +8,6 @@
 
 import WatchKit
 import Foundation
-import poopCheckWatchKit
 
 class InterfaceController: WKInterfaceController {
 
