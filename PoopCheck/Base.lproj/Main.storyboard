@@ -230,6 +230,12 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No trends available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-oB-882">
+                                <rect key="frame" x="230" y="400" width="140" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAA-bH-XCR" customClass="GraphView" customModule="PoopCheck" customModuleProvider="target">
                                 <rect key="frame" x="16" y="285" width="568" height="250"/>
                                 <subviews>
@@ -329,6 +335,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AAA-bH-XCR" firstAttribute="centerY" secondItem="GKT-oB-882" secondAttribute="centerY" id="2SC-wD-dH7"/>
                             <constraint firstItem="4zC-fm-TWU" firstAttribute="centerX" secondItem="aSd-3n-RkN" secondAttribute="centerX" constant="-0.5" id="8d1-vk-csQ"/>
                             <constraint firstItem="4zC-fm-TWU" firstAttribute="top" secondItem="aSd-3n-RkN" secondAttribute="bottom" constant="43" id="Bx9-t1-c2P"/>
                             <constraint firstItem="OkH-4h-5iJ" firstAttribute="top" secondItem="AAA-bH-XCR" secondAttribute="bottom" constant="16" id="J1W-Vf-QYk"/>
@@ -341,6 +348,7 @@
                             <constraint firstItem="AAA-bH-XCR" firstAttribute="trailing" secondItem="TcB-yf-FAj" secondAttribute="trailingMargin" id="k0r-2r-HMX"/>
                             <constraint firstItem="LlJ-Sb-0oj" firstAttribute="centerX" secondItem="ssD-R8-OU4" secondAttribute="centerX" id="pyX-aO-yK0"/>
                             <constraint firstItem="AAA-bH-XCR" firstAttribute="leading" secondItem="TcB-yf-FAj" secondAttribute="leadingMargin" id="sEZ-7H-ema"/>
+                            <constraint firstItem="AAA-bH-XCR" firstAttribute="centerX" secondItem="GKT-oB-882" secondAttribute="centerX" id="vXP-wj-vdX"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stats" image="stats" id="Opt-4d-J4C"/>

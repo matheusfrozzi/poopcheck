@@ -156,13 +156,10 @@
 		BFB12C171AEACAE900B8A09F /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		BFB12C181AEACAE900B8A09F /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BFB12C191AEACAE900B8A09F /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		BFEEE2311B051CC400A62319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFEEE2321B051CC400A62319 /* poopCheckWatchKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = poopCheckWatchKit.h; sourceTree = "<group>"; };
 		BFEEE2381B051CC400A62319 /* poopCheckWatchKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = poopCheckWatchKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEEE2401B051CC400A62319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEEE2411B051CC400A62319 /* poopCheckWatchKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poopCheckWatchKitTests.swift; sourceTree = "<group>"; };
 		BFEEE24F1B051D7200A62319 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
-		BFEEE2571B052A7F00A62319 /* poopControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = poopControl.swift; sourceTree = "<group>"; };
 		BFF2D33B1B050C7B00925FA6 /* PoopCheck WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "PoopCheck WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFF2D33E1B050C7B00925FA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF2D33F1B050C7B00925FA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -233,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				BFAF7FEA1AE8318C007A3468 /* PoopCheck */,
-				BFEEE22F1B051CC400A62319 /* poopCheckWatchKit */,
 				BFAF80001AE8318C007A3468 /* PoopCheckTests */,
 				BFF2D33C1B050C7B00925FA6 /* PoopCheck WatchKit Extension */,
 				BFF2D34E1B050C7B00925FA6 /* PoopCheck WatchKit App */,
@@ -355,24 +351,6 @@
 				BFAF80371AE86573007A3468 /* PoopManager.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		BFEEE22F1B051CC400A62319 /* poopCheckWatchKit */ = {
-			isa = PBXGroup;
-			children = (
-				BFEEE2321B051CC400A62319 /* poopCheckWatchKit.h */,
-				BFEEE2571B052A7F00A62319 /* poopControl.swift */,
-				BFEEE2301B051CC400A62319 /* Supporting Files */,
-			);
-			path = poopCheckWatchKit;
-			sourceTree = "<group>";
-		};
-		BFEEE2301B051CC400A62319 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				BFEEE2311B051CC400A62319 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BFEEE23E1B051CC400A62319 /* poopCheckWatchKitTests */ = {
