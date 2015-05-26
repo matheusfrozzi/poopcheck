@@ -18,7 +18,6 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
-//        poopButton.
 //        poopButton.layer.cornerRadius = poopButton.frame.size.width / 2;
 //        poopButton.clipsToBounds = true;
     }

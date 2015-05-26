@@ -44,6 +44,8 @@ import Parse
             endPoint,
             0)
         
+        // END GRADIENT
+        
         let margin:CGFloat = 24.0
         var columnXPoint = { (column:Int) -> CGFloat in
             //Calculate gap between points

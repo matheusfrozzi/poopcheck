@@ -50,11 +50,12 @@ class StatsViewController: UIViewController {
     }
 
     func loadAverage() {
-        var currentUser = PFUser.currentUser()
+//        var currentUser = PFUser.currentUser()
         var poopClass = PoopManager()
         
-        poopClass.getPoops(currentUser!.objectId!, callback: { (myArray, error) -> () in
-            if(error == nil) {
+        poopClass.getPoops("123", callback: { (myArray, error) -> () in
+            println(myArray!.count)
+            if(error == nil && myArray!.count != 0) {
                 var sum = 0.0
                 sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
                 
@@ -80,9 +81,9 @@ class StatsViewController: UIViewController {
     
     func loadGraphPoints() {
         var poopClass = PoopManager()
-        var currentUser = PFUser.currentUser()
+//        var currentUser = PFUser.currentUser()
 
-        poopClass.getPoopsForGraph(currentUser!.objectId!, callback: { (poopPoints, error) -> () in
+        poopClass.getPoopsForGraph("123", callback: { (poopPoints, error) -> () in
             if(poopPoints!.count == 0) {
                 println("CERTA RESPOSTA")
             } else {

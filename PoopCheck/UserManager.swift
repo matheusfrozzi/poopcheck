@@ -17,21 +17,24 @@ var createdAt: NSDate!
 class UserManager: NSObject {
     func register() {
         var user = PFUser()
-        user.username = "myUsername"
-        user.password = "myPassword"
-        user.email = "email@example.com"
+        user.username = "User"
+        user.password = "pass"
+        user.email = "user@user.com"
         // other fields can be set just like with PFObject
 
         user.signUpInBackgroundWithBlock { (succeded, error) -> Void in
             if error == nil {
-                // Hooray! Let them use the app now.
+                if UserDefaultsManager.getDateRegister == nil {
+                    println("welcome to the first time")
+                    UserDefaultsManager.getDateRegister = NSDate()
+                }
             } else {
                 println("errooooo")
                 // Show the errorString somewhere and let the user try again.
             }
         }
     }
-    
+
     func login(username: String, password: String) {
         PFUser.logInWithUsernameInBackground(username, password: password) {
             (user, error) -> Void in
@@ -43,7 +46,7 @@ class UserManager: NSObject {
 
         }
     }
-    
+
     func getDateRegister() {
         var currentUser = PFUser.currentUser()
         

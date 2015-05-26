@@ -33,11 +33,15 @@ class PoopManager: NSObject {
     }
 
     func newPoop(userID: String, callback: (error: NSError?) -> ()) {
+        if UserDefaultsManager.getDateRegister == nil {
+            UserDefaultsManager.getDateRegister = NSDate()
+        }
+
         PFGeoPoint.geoPointForCurrentLocationInBackground {
             (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
             if error == nil {
                 var nPoop = PFObject(className:"Poop")
-                nPoop["user"] = PFUser.objectWithoutDataWithObjectId(userID)
+//                nPoop["user"] = PFUser.objectWithoutDataWithObjectId(userID)
                 nPoop["location"] = geoPoint
                 nPoop["localDate"] = NSDate()
                 
@@ -59,17 +63,23 @@ class PoopManager: NSObject {
 //                        callback(error: error)
 //                    }
 //                }
+            } else {
+                println("no geopoint");
             }
         }
     }
 
     func getPoops(userID: String, callback: (poopResult: NSArray?, error: NSError?) -> ()) {
+        if UserDefaultsManager.getDateRegister == nil {
+            UserDefaultsManager.getDateRegister = NSDate()
+        }
+
         var query = PFQuery(className:"Poop")
         var saveQuery = PFObject(className:"Poop")
 //        saveQuery.un
         query.fromLocalDatastore()
 
-        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
+//        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
 
         var poopResultar: NSArray!
 
@@ -90,6 +100,10 @@ class PoopManager: NSObject {
     }
     
     func getPoopsForGraph(userID: String, callback: (poopPoints: [Int]?, error: NSError?) ->()) {
+        if UserDefaultsManager.getDateRegister == nil {
+            UserDefaultsManager.getDateRegister = NSDate()
+        }
+
         let cal = NSCalendar.currentCalendar()
         var date = cal.startOfDayForDate(NSDate())
         
@@ -99,7 +113,7 @@ class PoopManager: NSObject {
         var query = PFQuery(className:"Poop")
         query.fromLocalDatastore()
 
-        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
+//        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
         query.whereKey("localDate", greaterThan: dateweek)
 
         var graphPoints:[Int] = []

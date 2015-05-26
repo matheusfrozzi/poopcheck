@@ -37,7 +37,6 @@
 		BFAF802D1AE83544007A3468 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAF80221AE83544007A3468 /* MobileCoreServices.framework */; };
 		BFAF802E1AE83544007A3468 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAF80231AE83544007A3468 /* QuartzCore.framework */; };
 		BFAF802F1AE83544007A3468 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAF80241AE83544007A3468 /* Security.framework */; };
-		BFAF80301AE83544007A3468 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAF80251AE83544007A3468 /* StoreKit.framework */; };
 		BFAF80311AE83544007A3468 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAF80261AE83544007A3468 /* SystemConfiguration.framework */; };
 		BFAF80361AE86562007A3468 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF80351AE86562007A3468 /* UserManager.swift */; };
 		BFAF803C1AE87722007A3468 /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAF803B1AE87722007A3468 /* CheckInViewController.swift */; };
@@ -147,7 +146,6 @@
 		BFAF80221AE83544007A3468 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		BFAF80231AE83544007A3468 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BFAF80241AE83544007A3468 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		BFAF80251AE83544007A3468 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BFAF80261AE83544007A3468 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BFAF80351AE86562007A3468 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		BFAF80371AE86573007A3468 /* PoopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoopManager.swift; sourceTree = "<group>"; };
@@ -188,7 +186,6 @@
 				BFB12C1A1AEACAE900B8A09F /* FBSDKCoreKit.framework in Frameworks */,
 				BFAF802E1AE83544007A3468 /* QuartzCore.framework in Frameworks */,
 				BFAF802F1AE83544007A3468 /* Security.framework in Frameworks */,
-				BFAF80301AE83544007A3468 /* StoreKit.framework in Frameworks */,
 				BFAF80311AE83544007A3468 /* SystemConfiguration.framework in Frameworks */,
 				BFB12C1C1AEACAE900B8A09F /* FBSDKShareKit.framework in Frameworks */,
 				BFAF80181AE8347F007A3468 /* ParseUI.framework in Frameworks */,
@@ -306,7 +303,6 @@
 				BFAF80221AE83544007A3468 /* MobileCoreServices.framework */,
 				BFAF80231AE83544007A3468 /* QuartzCore.framework */,
 				BFAF80241AE83544007A3468 /* Security.framework */,
-				BFAF80251AE83544007A3468 /* StoreKit.framework */,
 				BFAF80261AE83544007A3468 /* SystemConfiguration.framework */,
 				BFAF80101AE8347F007A3468 /* Bolts.framework */,
 				BFAF80111AE8347F007A3468 /* ParseCrashReporting.framework */,
@@ -517,6 +513,9 @@
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
 							};
 						};
 					};

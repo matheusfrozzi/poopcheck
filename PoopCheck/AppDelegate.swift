@@ -66,7 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
 
-        var currentUser = PFUser.currentUser()
+//        var currentUser = PFUser.currentUser()
+        var currentUser = "123"
 
         if let userInfo = userInfo, request = userInfo["request"] as? String {
 
@@ -81,21 +82,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             if(request == "newPoop") {
                 PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint, error) -> Void in
-                    var nPoop = PFObject(className:"Poop")
-                    nPoop["user"] = currentUser
-                    nPoop["location"] = geoPoint
-                    nPoop["localDate"] = NSDate()
-                    
-                    nPoop.pin()
-                    reply(["reply":"new poop"])
-                    
+                    var poopClass = PoopManager()
+                    poopClass.newPoop("123") { (error) -> () in
+                        if(error == nil) {
+                            reply(["reply":"new poop"])
+                        } else {
+                            println("ERROR")
+                        }
+                    }
+
                     UIApplication.sharedApplication().endBackgroundTask(bgTask)
                     bgTask = UIBackgroundTaskInvalid
                 }
             } else if(request == "getAverage") {
                 var poopClass = PoopManager()
                 
-                poopClass.getPoops(currentUser!.objectId!, callback: { (myArray, error) -> () in
+                poopClass.getPoops(currentUser, callback: { (myArray, error) -> () in
                     if(error == nil) {
                         var sum = 0.0
                         sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)

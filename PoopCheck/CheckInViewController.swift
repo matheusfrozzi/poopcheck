@@ -41,16 +41,23 @@ class CheckInViewController: UIViewController {
             }
         }
         
+        if UserDefaultsManager.getDateRegister == nil {
+            println("welcome to the first time")
+            UserDefaultsManager.getDateRegister = NSDate()
+        }
+
 //        var user = UserManager()
 //        user.getDateRegister()
     }
 
     override func viewDidAppear(animated: Bool) {
-        var currentUser = PFUser.currentUser()
-
-        if currentUser == nil {
-            self.performSegueWithIdentifier("loginModal", sender: self)
-        }
+//        var currentUser = PFUser.currentUser()
+//
+//        if currentUser == nil {
+//            self.performSegueWithIdentifier("loginModal", sender: self)
+//            let user = UserManager()
+//            user.register()
+//        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +65,16 @@ class CheckInViewController: UIViewController {
     }
 
     @IBAction func savePoop(sender: AnyObject) {
-        var currentUser = PFUser.currentUser()
+//        var currentUser = PFUser.currentUser()
+//
+//        if currentUser == nil {
+//            //            self.performSegueWithIdentifier("loginModal", sender: self)
+//            let user = UserManager()
+//            user.register()
+//        }
 
         var poopClass = PoopManager()
-        poopClass.newPoop(currentUser!.objectId!) { (error) -> () in
+        poopClass.newPoop("123") { (error) -> () in
             if(error == nil) {
                 println("Pooped with success")
             } else {
