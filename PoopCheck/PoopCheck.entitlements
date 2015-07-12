@@ -8,7 +8,7 @@
 	</array>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.matheus.Parse.PoopCheck</string>
+		<string>$(AppIdentifierPrefix)com.matheus.PoopCheck</string>
 	</array>
 </dict>
 </plist>

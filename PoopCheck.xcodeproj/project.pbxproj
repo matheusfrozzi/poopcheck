@@ -807,11 +807,13 @@
 					/Users/matheusfrozzi/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PoopCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "8ac859e3-efee-4203-9e29-e02a5b44e5ca";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -828,11 +830,13 @@
 					/Users/matheusfrozzi/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = PoopCheck/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0ddbcebc-43e9-401c-b91c-b06bc6516674";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -919,7 +923,7 @@
 				INFOPLIST_FILE = "PoopCheck WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "dcee116e-6383-43be-be0d-8329a734f219";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -937,7 +941,7 @@
 				INFOPLIST_FILE = "PoopCheck WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f61d75d3-f491-4d52-8e81-7b4c8f76150f";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -955,7 +959,7 @@
 				INFOPLIST_FILE = "PoopCheck WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "3c11ec74-b670-4f40-a0e9-cae2f362365f";
+				PROVISIONING_PROFILE = "571d30fd-42c3-44a7-9a1b-f5dcc50f7d0f";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -971,7 +975,7 @@
 				INFOPLIST_FILE = "PoopCheck WatchKit App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "81d886f3-8c61-4c8b-86a3-a4918933ec6e";
+				PROVISIONING_PROFILE = "f61d75d3-f491-4d52-8e81-7b4c8f76150f";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
