@@ -18,28 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         Parse.enableLocalDatastore()
+        
+        Parse.enableDataSharingWithApplicationGroupIdentifier("group.com.matheus.Parse.PoopCheck")
 
         // Initialize Parse.
         Parse.setApplicationId("2AUvDjhYywJ3gdwpxUn1F1G9JLJsJcEd73GaXeh1",
             clientKey: "vLg9CIGiCIwXjXkEX9MppE7FDKTD6NBXduXNrwXh")
         
 //        PFFacebookUtils.initializeFacebookWithLaunchOptions(launchOptions)
-        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+//        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
 
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
 
         return true
-    }
-    
-    func application(application: UIApplication,
-        openURL url: NSURL,
-        sourceApplication: String?,
-        annotation: AnyObject?) -> Bool {
-            return FBSDKApplicationDelegate.sharedInstance().application(application,
-                openURL: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -57,7 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        FBSDKAppEvents.activateApp()
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -65,57 +56,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]?, reply: (([NSObject : AnyObject]!) -> Void)!) {
-
-//        var currentUser = PFUser.currentUser()
-        var currentUser = "123"
-
-        if let userInfo = userInfo, request = userInfo["request"] as? String {
-
-            UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
-            var bgTask = UIBackgroundTaskIdentifier()
-            bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler { () -> Void in
-                
-
-                UIApplication.sharedApplication().endBackgroundTask(bgTask)
-                bgTask = UIBackgroundTaskInvalid
-            }
-
-            if(request == "newPoop") {
-                PFGeoPoint.geoPointForCurrentLocationInBackground { (geoPoint, error) -> Void in
-                    var poopClass = PoopManager()
-                    poopClass.newPoop("123") { (error) -> () in
-                        if(error == nil) {
-                            reply(["reply":"new poop"])
-                        } else {
-                            println("ERROR")
-                        }
-                    }
-
-                    UIApplication.sharedApplication().endBackgroundTask(bgTask)
-                    bgTask = UIBackgroundTaskInvalid
-                }
-            } else if(request == "getAverage") {
-                var poopClass = PoopManager()
-                
-                poopClass.getPoops(currentUser, callback: { (myArray, error) -> () in
-                    if(error == nil) {
-                        var sum = 0.0
-                        sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
-
-                        reply(["reply": NSString(format: "%.1f", sum) as String])
-                    }
-                })
-            }
-        }
-    }
-    func betweenDays(date1:NSDate, date2:NSDate) -> Int {
-        let startDate:NSDate = date1
-        let endDate:NSDate = date2
-        
-        let cal = NSCalendar.currentCalendar()
-        let unit:NSCalendarUnit = .CalendarUnitDay
-        let components = cal.components(unit, fromDate: startDate, toDate: endDate, options: nil)
-        
-        return components.day
+//
+//        if let userInfo = userInfo, request = userInfo["request"] as? String {
+//            UIApplication.sharedApplication().setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum);
+//            var bgTask = UIBackgroundTaskIdentifier()
+//            bgTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler { () -> Void in
+//                
+//                
+//                UIApplication.sharedApplication().endBackgroundTask(bgTask)
+//                bgTask = UIBackgroundTaskInvalid
+//            }
+//
+//            if(request == "newPoop") {
+//                var poopClass = PoopManager()
+//                
+//                poopClass.newPoop() { (error) -> () in
+//                    if(error == nil) {
+//                        reply(["reply":"new poop"])
+//                    } else {
+//                        println("ERROR")
+//                    }
+//                }
+//
+//                UIApplication.sharedApplication().endBackgroundTask(bgTask)
+//                bgTask = UIBackgroundTaskInvalid
+//            } else if(request == "getAverage") {
+//                var poopClass = PoopManager()
+//
+//                poopClass.getPoops({ (myArray, error) -> () in
+//                    if(error == nil) {
+//                        var sum = 0.0
+//                        sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
+//                        
+//                        reply(["reply": NSString(format: "%.1f", sum) as String])
+//                    }
+//                })
+//                
+//                UIApplication.sharedApplication().endBackgroundTask(bgTask)
+//                bgTask = UIBackgroundTaskInvalid
+//            }
+//        }
     }
 }

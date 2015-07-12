@@ -7,57 +7,24 @@
 //
 
 import UIKit
-import MapKit
 import Parse
 
 class CheckInViewController: UIViewController {
-
-    @IBOutlet weak var mapView: MKMapView!
-    let regionRadius: CLLocationDistance = 1000
-
     @IBOutlet weak var poopButton: UIButton!
+    @IBOutlet weak var poopToday: UILabel!
+    @IBOutlet weak var didPoop: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         poopButton.layer.cornerRadius = poopButton.frame.size.width / 2;
         poopButton.clipsToBounds = true;
 
-        PFGeoPoint.geoPointForCurrentLocationInBackground {
-            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
-            if error == nil {
-                let location = CLLocationCoordinate2D(
-                    latitude: geoPoint!.latitude,
-                    longitude: geoPoint!.longitude
-                )
-
-                self.centerMapOnLocation(location)
-
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = location
-                annotation.title = "I'm pooping here"
-                annotation.subtitle = "Bathroom"
-
-                self.mapView.addAnnotation(annotation)
-            }
-        }
-        
         if UserDefaultsManager.getDateRegister == nil {
-            println("welcome to the first time")
             UserDefaultsManager.getDateRegister = NSDate()
         }
-
-//        var user = UserManager()
-//        user.getDateRegister()
-    }
-
-    override func viewDidAppear(animated: Bool) {
-//        var currentUser = PFUser.currentUser()
-//
-//        if currentUser == nil {
-//            self.performSegueWithIdentifier("loginModal", sender: self)
-//            let user = UserManager()
-//            user.register()
-//        }
+        
+        self.loadPoops()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,67 +32,32 @@ class CheckInViewController: UIViewController {
     }
 
     @IBAction func savePoop(sender: AnyObject) {
-//        var currentUser = PFUser.currentUser()
-//
-//        if currentUser == nil {
-//            //            self.performSegueWithIdentifier("loginModal", sender: self)
-//            let user = UserManager()
-//            user.register()
-//        }
-
         var poopClass = PoopManager()
-        poopClass.newPoop("123") { (error) -> () in
+
+        poopClass.newPoop() { (error) -> () in
             if(error == nil) {
-                println("Pooped with success")
+                self.didPoop.hidden = false
+                var timer = NSTimer.scheduledTimerWithTimeInterval(4, target: self, selector: Selector("update"), userInfo: nil, repeats: true)
+                self.loadPoops()
             } else {
-                println("whats")
+                self.poopToday.text = "Something is wrong, try again"
             }
         }
     }
-    
-    func centerMapOnLocation(location: CLLocationCoordinate2D) {
-        let span = MKCoordinateSpanMake(0.001, 0.001)
-        let region = MKCoordinateRegion(center: location, span: span)
-        self.mapView.setRegion(region, animated: true)
-    }
-    
-    @IBAction func backLogout(sender: UIStoryboardSegue) {
+
+    func update() {
+        self.didPoop.hidden = true
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-extension CheckInViewController: MKMapViewDelegate {
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-        if let annotation = annotation as? PinManager {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
-                as? MKPinAnnotationView { // 2
-                    dequeuedView.annotation = annotation
-                    view = dequeuedView
+    func loadPoops() {
+        let poopClass = PoopManager()
+        
+        poopClass.getPoopsForDay(NSDate(), callback: { (countsPoop, error) -> () in
+            if(error == nil) {
+                self.poopToday.text = "You pooped \(countsPoop!) times today"
             } else {
-                // 3
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                //                view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclosure) as! UIView
+                self.poopToday.text = "Something is wrong, try again"
             }
-            
-            view.image = UIImage(named:"toilet-icon")
-            
-            //            view.pinColor = annotation.pinColor()
-            
-            return view
-        }
-        return nil
+        })
     }
 }

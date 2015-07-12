@@ -32,7 +32,6 @@ class StatsViewController: UIViewController {
         self.loadGraphPoints()
 
         let cal = NSCalendar.currentCalendar()
-        // start with today
         var date = cal.startOfDayForDate(NSDate())
         
         var days = [Int]()
@@ -50,10 +49,9 @@ class StatsViewController: UIViewController {
     }
 
     func loadAverage() {
-//        var currentUser = PFUser.currentUser()
         var poopClass = PoopManager()
         
-        poopClass.getPoops("123", callback: { (myArray, error) -> () in
+        poopClass.getPoops({ (myArray, error) -> () in
             println(myArray!.count)
             if(error == nil && myArray!.count != 0) {
                 var sum = 0.0
@@ -62,7 +60,7 @@ class StatsViewController: UIViewController {
                 let nf = NSNumberFormatter()
                 nf.numberStyle = .DecimalStyle
  
-                self.average.text = NSString(format: "%.1f", sum) as String //nf.stringFromNumber(f)
+                self.average.text = NSString(format: "%.1f", sum) as String 
                 self.average.hidden = false
             }
         })
@@ -81,9 +79,8 @@ class StatsViewController: UIViewController {
     
     func loadGraphPoints() {
         var poopClass = PoopManager()
-//        var currentUser = PFUser.currentUser()
 
-        poopClass.getPoopsForGraph("123", callback: { (poopPoints, error) -> () in
+        poopClass.getPoopsForGraph({ (poopPoints, error) -> () in
             if(poopPoints!.count == 0) {
                 println("CERTA RESPOSTA")
             } else {
@@ -94,14 +91,4 @@ class StatsViewController: UIViewController {
             }
         })
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

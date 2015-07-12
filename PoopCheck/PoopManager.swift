@@ -24,62 +24,55 @@ class PoopManager: NSObject {
     init(dictionary : PFObject) {
         super.init()
 
-//        self.date = formatDate(dictionary.createdAt!, format: "dd/MM/yyyy")
-//        self.hour = formatDate(dictionary.createdAt!, format: "HH:mm")
-        self.location = dictionary["location"] as! PFGeoPoint
-        
         self.date = formatDate(dictionary["localDate"] as! NSDate, format: "dd/MM/yyyy")
         self.hour = formatDate(dictionary["localDate"] as! NSDate, format: "HH:mm")
     }
 
-    func newPoop(userID: String, callback: (error: NSError?) -> ()) {
+    func newPoop(callback: (error: NSError?) -> ()) {
         if UserDefaultsManager.getDateRegister == nil {
             UserDefaultsManager.getDateRegister = NSDate()
         }
 
-        PFGeoPoint.geoPointForCurrentLocationInBackground {
-            (geoPoint: PFGeoPoint?, error: NSError?) -> Void in
-            if error == nil {
-                var nPoop = PFObject(className:"Poop")
-//                nPoop["user"] = PFUser.objectWithoutDataWithObjectId(userID)
-                nPoop["location"] = geoPoint
-                nPoop["localDate"] = NSDate()
-                
-                
-                nPoop.pinInBackgroundWithBlock {
-                    (success: Bool, error: NSError?) -> Void in
-                    if (success) {
-                        callback(error: nil)
-                    } else {
-                        callback(error: error)
-                    }
-                }
-//
-//                nPoop.saveInBackgroundWithBlock {
-//                    (success: Bool, error: NSError?) -> Void in
-//                    if (success) {
-//                        callback(error: nil)
-//                    } else {
-//                        callback(error: error)
-//                    }
-//                }
+        var nPoop = PFObject(className:"Poop")
+        nPoop["localDate"] = NSDate()
+        
+        nPoop.pinInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
+                callback(error: nil)
             } else {
-                println("no geopoint");
+                callback(error: error)
             }
         }
     }
 
-    func getPoops(userID: String, callback: (poopResult: NSArray?, error: NSError?) -> ()) {
+    func getPoopsForDay(day: NSDate, callback: (countsPoop: Int?, error: NSError?) -> ()) {
+        var query = PFQuery(className:"Poop")
+
+        let cal = NSCalendar.currentCalendar()
+
+        var dateToday = cal.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: day, options: nil)!
+
+        query.whereKey("localDate", greaterThan: dateToday)
+        query.fromLocalDatastore()
+        
+        query.countObjectsInBackgroundWithBlock({ (countPoop, error) -> Void in
+            if error == nil {
+                callback(countsPoop: Int(countPoop), error: nil)
+            } else {
+                println("Error: \(error) \(error!.userInfo!)")
+                callback(countsPoop: nil, error: error!)
+            }
+        })
+    }
+    
+    func getPoops(callback: (poopResult: NSArray?, error: NSError?) -> ()) {
         if UserDefaultsManager.getDateRegister == nil {
             UserDefaultsManager.getDateRegister = NSDate()
         }
 
         var query = PFQuery(className:"Poop")
-        var saveQuery = PFObject(className:"Poop")
-//        saveQuery.un
         query.fromLocalDatastore()
-
-//        query.whereKey("user", equalTo:PFUser.objectWithoutDataWithObjectId(userID))
 
         var poopResultar: NSArray!
 
@@ -88,9 +81,6 @@ class PoopManager: NSObject {
             if error == nil {
                 poopResultar = objects!
                 callback(poopResult: poopResultar, error: nil)
-//                println(objects!)
-//                PFObject.pinAllInBackground(objects)
-//                saveQuery.saveEventually()
             } else {
                 // Log details of the failure
                 println("Error: \(error) \(error!.userInfo!)")
@@ -99,7 +89,7 @@ class PoopManager: NSObject {
         }
     }
     
-    func getPoopsForGraph(userID: String, callback: (poopPoints: [Int]?, error: NSError?) ->()) {
+    func getPoopsForGraph(callback: (poopPoints: [Int]?, error: NSError?) ->()) {
         if UserDefaultsManager.getDateRegister == nil {
             UserDefaultsManager.getDateRegister = NSDate()
         }

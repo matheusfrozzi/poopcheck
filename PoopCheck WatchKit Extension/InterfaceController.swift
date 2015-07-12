@@ -8,6 +8,7 @@
 
 import WatchKit
 import Foundation
+import Parse
 
 class InterfaceController: WKInterfaceController {
 
@@ -17,9 +18,15 @@ class InterfaceController: WKInterfaceController {
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
-//        poopButton.layer.cornerRadius = poopButton.frame.size.width / 2;
-//        poopButton.clipsToBounds = true;
+        Parse.enableLocalDatastore()
+
+        Parse.enableDataSharingWithApplicationGroupIdentifier("group.com.matheus.Parse.PoopCheck",
+            containingApplication: "com.matheus.PoopCheck");
+        
+        Parse.setApplicationId("2AUvDjhYywJ3gdwpxUn1F1G9JLJsJcEd73GaXeh1",
+            clientKey: "vLg9CIGiCIwXjXkEX9MppE7FDKTD6NBXduXNrwXh")
+
+        loadData()
     }
 
     override func willActivate() {
@@ -33,13 +40,32 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func makePoop() {
-        var request = ["request": "newPoop"]
+//        var request = ["request": "newPoop"]
+//        
+//        WKInterfaceController.openParentApplication(request, reply: { (replyFromParent, error) -> Void in
+//            if(error != nil) {
+//                println("there was an error receiving a reply")
+//            } else {
+//                self.textLabel.setText("You pooped today")
+//            }
+//        })
+        let poopClass = PoopManager()
         
-        WKInterfaceController.openParentApplication(request, reply: { (replyFromParent, error) -> Void in
-            if(error != nil) {
-                println("there was an error receiving a reply")
+        poopClass.newPoop { (error) -> () in
+            if(error == nil) {
+                self.loadData()
+            }
+        }
+    }
+
+    func loadData() {
+        let poopClass = PoopManager()
+        
+        poopClass.getPoopsForDay(NSDate(), callback: { (countsPoop, error) -> () in
+            if(error == nil) {
+                self.textLabel.setText("You pooped \(countsPoop!) times today")
             } else {
-                self.textLabel.setText("You pooped today")
+                self.textLabel.setText("Something is wrong, try again")
             }
         })
     }

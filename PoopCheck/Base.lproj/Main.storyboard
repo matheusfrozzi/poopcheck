@@ -1,68 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oBd-AL-TDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="oBd-AL-TDj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
-        <scene sceneID="MLc-bI-AsG">
-            <objects>
-                <viewController id="D02-fo-8rY" customClass="LoginViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZzU-Sn-YRW"/>
-                        <viewControllerLayoutGuide type="bottom" id="VHh-yK-1s6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="qGZ-Vz-zxP">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PoopCheck" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpr-ac-QVp">
-                                <rect key="frame" x="224" y="95" width="153" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To control your poops you need register" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55g-Vh-YXP">
-                                <rect key="frame" x="168" y="139" width="265" height="19"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-xY-5Bu">
-                                <rect key="frame" x="213" y="264" width="175" height="44"/>
-                                <color key="backgroundColor" red="0.34901960784313724" green="0.69019607843137254" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="3dW-Jl-ESX"/>
-                                    <constraint firstAttribute="width" constant="175" id="OUJ-fj-AmR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <state key="normal" title="Log in with Facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginWIthFacebook:" destination="D02-fo-8rY" eventType="touchUpInside" id="1hj-fK-JD2"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xpr-ac-QVp" firstAttribute="top" secondItem="ZzU-Sn-YRW" secondAttribute="bottom" constant="75" id="7dz-OH-h5b"/>
-                            <constraint firstItem="55g-Vh-YXP" firstAttribute="centerX" secondItem="xpr-ac-QVp" secondAttribute="centerX" id="B0m-7Y-zve"/>
-                            <constraint firstItem="55g-Vh-YXP" firstAttribute="top" secondItem="xpr-ac-QVp" secondAttribute="bottom" constant="8" id="Fgh-OW-Su1"/>
-                            <constraint firstItem="55g-Vh-YXP" firstAttribute="centerX" secondItem="hrc-xY-5Bu" secondAttribute="centerX" constant="-0.5" id="n7N-Ou-h8T"/>
-                            <constraint firstItem="hrc-xY-5Bu" firstAttribute="top" secondItem="55g-Vh-YXP" secondAttribute="bottom" constant="106" id="rbd-MK-Xxb"/>
-                            <constraint firstAttribute="centerX" secondItem="xpr-ac-QVp" secondAttribute="centerX" id="uAD-eH-bt2"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pxe-0i-R2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2564" y="280"/>
-        </scene>
-        <!--Check In View Controller-->
+        <!--Poop-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CheckInViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,12 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e26-Nn-sKS">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jPs-ed-49h"/>
-                                </connections>
-                            </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvF-67-Qph">
                                 <rect key="frame" x="220" y="220" width="160" height="160"/>
                                 <color key="backgroundColor" red="0.78431372549019607" green="0.43137254901960786" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,103 +34,50 @@
                                     <action selector="savePoop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTW-Ih-wq7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You pooped 0 times today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agJ-mX-eZU">
+                                <rect key="frame" x="203" y="396" width="193.5" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have a nice moment at bethroom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d47-TH-lNJ">
+                                <rect key="frame" x="147" y="181.5" width="307" height="22.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="e26-Nn-sKS" secondAttribute="trailing" id="HMU-ZP-T68"/>
-                            <constraint firstItem="e26-Nn-sKS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KOO-Dd-y6a"/>
+                            <constraint firstItem="d47-TH-lNJ" firstAttribute="centerX" secondItem="qvF-67-Qph" secondAttribute="centerX" id="GER-nS-Qs6"/>
                             <constraint firstItem="qvF-67-Qph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="TBG-xW-ZU5"/>
+                            <constraint firstItem="qvF-67-Qph" firstAttribute="top" secondItem="d47-TH-lNJ" secondAttribute="bottom" constant="16" id="WG9-3s-GS9"/>
                             <constraint firstAttribute="centerY" secondItem="qvF-67-Qph" secondAttribute="centerY" id="Y4O-69-9iY"/>
-                            <constraint firstAttribute="bottom" secondItem="e26-Nn-sKS" secondAttribute="bottom" id="afg-px-f0q"/>
-                            <constraint firstItem="e26-Nn-sKS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bGy-Wf-MwN"/>
+                            <constraint firstItem="agJ-mX-eZU" firstAttribute="centerX" secondItem="qvF-67-Qph" secondAttribute="centerX" id="fDR-q6-F7j"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qvF-67-Qph" secondAttribute="bottom" constant="16" id="hch-OX-L6J"/>
-                            <constraint firstItem="qvF-67-Qph" firstAttribute="top" secondItem="e26-Nn-sKS" secondAttribute="bottom" constant="-99" id="pQA-OT-kWe"/>
                             <constraint firstAttribute="centerX" secondItem="qvF-67-Qph" secondAttribute="centerX" id="swH-is-OKR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qvF-67-Qph" secondAttribute="trailing" constant="32" id="two-wX-y4R"/>
+                            <constraint firstItem="agJ-mX-eZU" firstAttribute="top" secondItem="qvF-67-Qph" secondAttribute="bottom" constant="16" id="zg8-gh-9md"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="TBG-xW-ZU5"/>
-                                <exclude reference="pQA-OT-kWe"/>
                                 <exclude reference="two-wX-y4R"/>
                                 <exclude reference="hch-OX-L6J"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="u7d-yd-kPD">
-                        <barButtonItem key="rightBarButtonItem" image="config" id="lO9-zr-THd">
-                            <connections>
-                                <segue destination="8dD-Jx-NzE" kind="show" id="mAQ-9O-n7D"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="Poop" image="checkin" id="pSz-aZ-3UL"/>
+                    <navigationItem key="navigationItem" id="u7d-yd-kPD"/>
                     <connections>
-                        <outlet property="mapView" destination="e26-Nn-sKS" id="HUU-c5-SKN"/>
+                        <outlet property="didPoop" destination="d47-TH-lNJ" id="5Bd-AP-2yW"/>
                         <outlet property="poopButton" destination="qvF-67-Qph" id="CpH-M7-il2"/>
-                        <segue destination="D02-fo-8rY" kind="presentation" identifier="loginModal" id="yOK-WE-Tdu"/>
+                        <outlet property="poopToday" destination="agJ-mX-eZU" id="2K2-UT-uRj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1855" y="280"/>
-        </scene>
-        <!--Config-->
-        <scene sceneID="Ibx-ZR-GyO">
-            <objects>
-                <tableViewController id="8dD-Jx-NzE" customClass="ConfigTableViewController" customModule="PoopCheck" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="L9m-Pu-1ky">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <sections>
-                            <tableViewSection id="429-zc-TcD">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="44" id="Zz4-7R-xR8">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zz4-7R-xR8" id="PA8-Vo-XoX">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwQ-gh-Zy3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                    <state key="normal" title="Logout">
-                                                        <color key="titleColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="Logout:" destination="8dD-Jx-NzE" eventType="touchUpInside" id="aD6-tZ-mZi"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="LwQ-gh-Zy3" firstAttribute="top" secondItem="PA8-Vo-XoX" secondAttribute="top" id="9Q7-Gz-VGc"/>
-                                                <constraint firstItem="LwQ-gh-Zy3" firstAttribute="leading" secondItem="PA8-Vo-XoX" secondAttribute="leading" id="e4T-Hh-aEp"/>
-                                                <constraint firstAttribute="trailing" secondItem="LwQ-gh-Zy3" secondAttribute="trailing" id="lKP-6V-nGu"/>
-                                                <constraint firstAttribute="bottom" secondItem="LwQ-gh-Zy3" secondAttribute="bottom" id="lmK-Q5-aJN"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="8dD-Jx-NzE" id="gGS-F9-cQn"/>
-                            <outlet property="delegate" destination="8dD-Jx-NzE" id="AxV-hI-feG"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Config" id="tIU-u5-vhd">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="VmH-7G-ZEh">
-                            <connections>
-                                <segue destination="pLC-gr-8Q1" kind="unwind" identifier="backLogout" unwindAction="backLogout:" id="ahr-9O-9Oo"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k1L-Jn-ARL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pLC-gr-8Q1" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1855" y="1010"/>
+            <point key="canvasLocation" x="1043" y="258"/>
         </scene>
         <!--Stats-->
         <scene sceneID="1LY-EU-y0n">
@@ -207,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poop Average" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LlJ-Sb-0oj">
-                                <rect key="frame" x="236" y="28" width="129" height="25"/>
+                                <rect key="frame" x="236" y="28" width="128.5" height="25"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -225,70 +110,70 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stats of week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-fm-TWU">
-                                <rect key="frame" x="250" y="215" width="100" height="21"/>
+                                <rect key="frame" x="250" y="215" width="100" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No trends available" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKT-oB-882">
-                                <rect key="frame" x="230" y="400" width="140" height="21"/>
+                                <rect key="frame" x="230" y="399" width="139.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAA-bH-XCR" customClass="GraphView" customModule="PoopCheck" customModuleProvider="target">
-                                <rect key="frame" x="16" y="285" width="568" height="250"/>
+                                <rect key="frame" x="16" y="284" width="568" height="250.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pVa-jD-KAp">
-                                        <rect key="frame" x="551" y="51" width="9" height="18"/>
+                                        <rect key="frame" x="551" y="51" width="8.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUt-IQ-dhc">
-                                        <rect key="frame" x="551" y="190" width="9" height="18"/>
+                                        <rect key="frame" x="551" y="191" width="8.5" height="17.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wun-eZ-ged">
-                                        <rect key="frame" x="20" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="20" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4c9-gA-eaL">
-                                        <rect key="frame" x="61" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="61" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyf-jr-llQ">
-                                        <rect key="frame" x="99" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="99" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-Ex-04P">
-                                        <rect key="frame" x="135" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="135" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zty-rC-uP5">
-                                        <rect key="frame" x="144" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="144" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZE-on-hfy">
-                                        <rect key="frame" x="153" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="153" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCC-XM-4Wg">
-                                        <rect key="frame" x="162" y="225" width="8" height="17"/>
+                                        <rect key="frame" x="162" y="226" width="8" height="16.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -373,7 +258,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8vC-eM-les" kind="relationship" relationship="viewControllers" id="h2S-jx-RTX"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="ONx-IF-MTU"/>
                         <segue destination="nGG-hB-JN2" kind="relationship" relationship="viewControllers" id="fI8-Oj-wgn"/>
                     </connections>
                 </tabBarController>
@@ -381,29 +266,9 @@
             </objects>
             <point key="canvasLocation" x="172" y="651"/>
         </scene>
-        <!--Poop-->
-        <scene sceneID="hbD-OO-uJs">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8vC-eM-les" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Poop" image="checkin" id="jKb-FN-Ojl"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ypf-z4-1ek">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="exK-2E-gL0"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ACJ-KO-RPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1043" y="280"/>
-        </scene>
     </scenes>
     <resources>
         <image name="checkin" width="22" height="22"/>
-        <image name="config" width="22" height="22"/>
         <image name="stats" width="22" height="22"/>
     </resources>
 </document>
