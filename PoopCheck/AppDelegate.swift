@@ -30,6 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // [Optional] Track statistics around application opens.
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+//        let color = UIColor(red: 55.0/255.0, green: 61.0/255.0, blue: 74.0/255.0, alpha: 1.0)
+//        UITabBar.appearance().barTintColor = color
+        UITabBar.appearance().tintColor = UIColor(red: 200.0/255.0, green: 110.0/255.0, blue: 223.0/255.0, alpha: 1.0)
+
 
         return true
     }

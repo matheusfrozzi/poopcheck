@@ -50,8 +50,9 @@ class PoopManager: NSObject {
         var query = PFQuery(className:"Poop")
 
         let cal = NSCalendar.currentCalendar()
+        let dateToday = cal.startOfDayForDate(NSDate())
 
-        var dateToday = cal.dateByAddingUnit(.CalendarUnitDay, value: -1, toDate: day, options: nil)!
+        println(dateToday)
 
         query.whereKey("localDate", greaterThan: dateToday)
         query.fromLocalDatastore()
