@@ -40,7 +40,7 @@ class AverageInterfaceController: WKInterfaceController {
                 var sum = 0.0
                 sum =  Double(myArray!.count) / Double(self.betweenDays(UserDefaultsManager.getDateRegister!,date2: NSDate()) + 1)
 
-                self.averageLabel.setText(String(stringInterpolationSegment: sum))
+                self.averageLabel.setText(NSString(format: "%.1f", sum) as String)
                 self.averageLabel.setHidden(false)
             }
         })

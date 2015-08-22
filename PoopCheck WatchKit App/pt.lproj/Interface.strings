@@ -1,0 +1,18 @@
+
+/* Class = "WKInterfaceLabel"; text = "You pooped 0 times today"; ObjectID = "5en-r9-eo2"; */
+"5en-r9-eo2.text" = "Você cagou nenhuma vez hoje";
+
+/* Class = "WKInterfaceButton"; title = "Poop"; ObjectID = "HJX-Go-sCa"; */
+"HJX-Go-sCa.title" = "Cagar";
+
+/* Class = "WKInterfaceLabel"; text = "Poop Average"; ObjectID = "RKH-pX-X8M"; */
+"RKH-pX-X8M.text" = "Média de cagadas";
+
+/* Class = "WKInterfaceLabel"; text = "Alert Label"; ObjectID = "XkS-y5-khE"; */
+"XkS-y5-khE.text" = "Alert Label";
+
+/* Class = "WKInterfaceLabel"; text = "1.0"; ObjectID = "pZO-Lc-MUw"; */
+"pZO-Lc-MUw.text" = "1.0";
+
+/* Class = "WKInterfaceLabel"; text = "per day"; ObjectID = "rZ4-SO-XLn"; */
+"rZ4-SO-XLn.text" = "por dia";

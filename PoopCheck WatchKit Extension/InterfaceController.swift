@@ -63,7 +63,13 @@ class InterfaceController: WKInterfaceController {
         
         poopClass.getPoopsForDay(NSDate(), callback: { (countsPoop, error) -> () in
             if(error == nil) {
-                self.textLabel.setText("You pooped \(countsPoop!) times today")
+                var string: String?
+                if countsPoop == 1 {
+                    string = NSLocalizedString("PoopCount", comment: "") + String(countsPoop!) + NSLocalizedString("Time", comment: "")
+                } else {
+                    string = NSLocalizedString("PoopCount", comment: "") + String(countsPoop!) + NSLocalizedString("Times", comment: "")
+                }
+                self.textLabel.setText(string)
             } else {
                 self.textLabel.setText("Something is wrong, try again")
             }
